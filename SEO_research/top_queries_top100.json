@@ -1,0 +1,3610 @@
+{
+  "samara": [
+    {
+      "query": "газобетон",
+      "frequency": 6771.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок",
+      "frequency": 6186.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки",
+      "frequency": 1785.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько газоблок",
+      "frequency": 736.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон самара",
+      "frequency": 613.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок самара",
+      "frequency": 552.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок цена",
+      "frequency": 493.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон блок",
+      "frequency": 474.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газоблок",
+      "frequency": 455.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "одноэтажный из газобетона",
+      "frequency": 451.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон коттедж",
+      "frequency": 442.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: Коттедж",
+      "page": "/samara/catalog/",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон коттедж самара",
+      "frequency": 358.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: Коттедж",
+      "page": "/samara/catalog/",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки самара",
+      "frequency": 351.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетонные блоки",
+      "frequency": 349.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки в самаре купить",
+      "frequency": 348.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько газобетона",
+      "frequency": 328.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/samara/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "какой газобетон",
+      "frequency": 324.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "куб газоблока",
+      "frequency": 297.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблоки какие",
+      "frequency": 294.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена за куб",
+      "frequency": 285.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газоблок в самаре",
+      "frequency": 275.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонный блок",
+      "frequency": 273.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "стена из газобетона",
+      "frequency": 268.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "баня из газоблока",
+      "frequency": 266.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "нужен газоблок",
+      "frequency": 251.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок коттедж",
+      "frequency": 248.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон официальный",
+      "frequency": 247.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/samara/catalog/-",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена",
+      "frequency": 237.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок размеры",
+      "frequency": 236.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "баня из газобетона",
+      "frequency": 226.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки в самаре",
+      "frequency": 225.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "стоимость блоков из газобетона",
+      "frequency": 225.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон",
+      "frequency": 224.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сайт газобетон",
+      "frequency": 220.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "лучший газоблок",
+      "frequency": 219.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон официальный сайт",
+      "frequency": 211.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/samara/catalog/-",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок цена в самаре за куб",
+      "frequency": 193.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблоки стоя",
+      "frequency": 180.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "купить газобетон блоки самара",
+      "frequency": 177.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок в кубе",
+      "frequency": 176.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько стоит газоблок",
+      "frequency": 174.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон 63",
+      "frequency": 171.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: Газобетон 63",
+      "page": "/samara/catalog/-63",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон сгзсб",
+      "frequency": 164.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки цена",
+      "frequency": 163.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок цена сгзсб",
+      "frequency": 163.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2"
+    },
+    {
+      "query": "нужен газобетон",
+      "frequency": 163.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "построил из газобетона",
+      "frequency": 163.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки в самаре купить цены",
+      "frequency": 159.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "стена из газоблока",
+      "frequency": 158.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "купить газобетонные блоки в самаре",
+      "frequency": 157.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "1 газобетон",
+      "frequency": 153.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "коттедж самара газобетон",
+      "frequency": 153.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок сколько нужно",
+      "frequency": 150.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/samara/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "купить газоблоки в самаре от производителя цена",
+      "frequency": 150.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "стоимость газоблока за штуку в самаре",
+      "frequency": 147.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон размеры",
+      "frequency": 146.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "стоимость газобетонного блока в самаре",
+      "frequency": 146.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки от производителя цена купить",
+      "frequency": 139.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "калькулятор газобетона",
+      "frequency": 139.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/samara/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "цена газобетонные блоки в самаре",
+      "frequency": 139.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки цена за штуку в самаре",
+      "frequency": 138.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "поддон газоблока",
+      "frequency": 138.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок коттедж самара",
+      "frequency": 134.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "м из газобетона",
+      "frequency": 134.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон самара сгзсб",
+      "frequency": 133.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок тольятти",
+      "frequency": 133.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "калькулятор газоблока",
+      "frequency": 131.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/samara/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "коттедж газобетон официальный",
+      "frequency": 131.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/samara/catalog/-",
+      "priority": "2"
+    },
+    {
+      "query": "стоит газобетон",
+      "frequency": 131.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон кв м",
+      "frequency": 130.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "фундамент для газобетона",
+      "frequency": 130.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "фундамент",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "коттедж самара газобетон официальный",
+      "frequency": 129.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/samara/catalog/-",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон купить в самаре",
+      "frequency": 128.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблоки в самаре цены сгзсб",
+      "frequency": 126.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2"
+    },
+    {
+      "query": "сколько стоит газобетон",
+      "frequency": 125.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон крыша",
+      "frequency": 123.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон самара официальный сайт",
+      "frequency": 122.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/samara/catalog/-",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки сгзсб",
+      "frequency": 119.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2"
+    },
+    {
+      "query": "сколько газоблоков в кубе",
+      "frequency": 119.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько куб газоблока в кубе",
+      "frequency": 119.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько кубов в газоблоке",
+      "frequency": 119.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон 100",
+      "frequency": 116.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон своими руками",
+      "frequency": 115.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "куб газобетона",
+      "frequency": 115.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "кубе газобетон",
+      "frequency": 115.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон снаружи",
+      "frequency": 114.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок своими руками",
+      "frequency": 114.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок цена в самаре",
+      "frequency": 114.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок за штуку",
+      "frequency": 111.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "кладу газоблоки",
+      "frequency": 111.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "ложу газоблоки",
+      "frequency": 111.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон ключ",
+      "frequency": 110.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок сколько штук",
+      "frequency": 110.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок цена за штуку",
+      "frequency": 108.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблоки в самаре цены",
+      "frequency": 106.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки размеры и цены",
+      "frequency": 104.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок размеры и цены",
+      "frequency": 104.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/samara/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "сколько газобетонных блоков",
+      "frequency": 103.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 300",
+      "frequency": 102.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "коттедж газобетон официальный сайт",
+      "frequency": 102.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/samara/catalog/-",
+      "priority": "2"
+    }
+  ],
+  "moscow": [
+    {
+      "query": "газобетон",
+      "frequency": 65848.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит",
+      "frequency": 8939.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "одноэтажный из газобетона",
+      "frequency": 4238.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон ключ",
+      "frequency": 4159.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена",
+      "frequency": 3255.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон блок",
+      "frequency": 3211.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "блоки бонолит",
+      "frequency": 2784.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "стена из газобетона",
+      "frequency": 2743.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "какой газобетон",
+      "frequency": 2601.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "сколько газобетона",
+      "frequency": 2551.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/moscow/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон",
+      "frequency": 2288.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "построил из газобетона",
+      "frequency": 1812.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "московский газобетон",
+      "frequency": 1441.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит официальный",
+      "frequency": 1329.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон московская область",
+      "frequency": 1319.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит сайт",
+      "frequency": 1302.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит официальный сайт",
+      "frequency": 1273.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "стоит газобетон",
+      "frequency": 1167.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "толщина газобетона",
+      "frequency": 1111.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "отделка газобетона",
+      "frequency": 1100.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "фундамент для газобетона",
+      "frequency": 1099.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "фундамент",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько стоит газобетон",
+      "frequency": 1096.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "м из газобетона",
+      "frequency": 1056.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "1 газобетон",
+      "frequency": 1024.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 100",
+      "frequency": 1002.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "нужен газобетон",
+      "frequency": 962.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон кв м",
+      "frequency": 934.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "баня из газобетона",
+      "frequency": 921.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "стоимость газобетона",
+      "frequency": 919.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить бонолит",
+      "frequency": 908.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон своими руками",
+      "frequency": 837.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "гараж из газобетона",
+      "frequency": 800.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон размеры",
+      "frequency": 799.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон снаружи",
+      "frequency": 776.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "чем хорош газобетон",
+      "frequency": 770.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "куб газобетона",
+      "frequency": 758.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "кубе газобетон",
+      "frequency": 755.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон крыша",
+      "frequency": 752.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит цена",
+      "frequency": 745.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "исткульт",
+      "frequency": 744.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок бонолит",
+      "frequency": 722.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "калькулятор газобетона",
+      "frequency": 701.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/moscow/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "какой газобетон лучше",
+      "frequency": 661.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 2",
+      "frequency": 641.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит газобетонные",
+      "frequency": 628.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 150",
+      "frequency": 628.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "пена для газобетона",
+      "frequency": 627.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон d500",
+      "frequency": 604.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "istkult",
+      "frequency": 600.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки бонолит",
+      "frequency": 585.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон внутри",
+      "frequency": 560.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон бесплатно",
+      "frequency": 557.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон москва",
+      "frequency": 555.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Москва",
+      "page": "/moscow/catalog/",
+      "priority": "1"
+    },
+    {
+      "query": "сколько стоит построить из газобетона",
+      "frequency": 549.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "утепление газобетона",
+      "frequency": 548.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "утепление",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "терраса из газобетона",
+      "frequency": 537.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "пеноблок бонолит",
+      "frequency": 535.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 8",
+      "frequency": 532.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена за куб",
+      "frequency": 521.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "перекрытие из газобетона",
+      "frequency": 507.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "завод бонолит",
+      "frequency": 497.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "окна в газобетон",
+      "frequency": 497.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон официальный",
+      "frequency": 496.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/moscow/catalog/-",
+      "priority": "1"
+    },
+    {
+      "query": "армопояс для газобетона",
+      "frequency": 494.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "конструкции",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "блоки бонолит купить",
+      "frequency": 487.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "сайт газобетон",
+      "frequency": 482.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон бонолит",
+      "frequency": 478.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "6 6 газобетон",
+      "frequency": 475.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон официальный сайт",
+      "frequency": 471.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/moscow/catalog/-",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 200",
+      "frequency": 462.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько блоков газобетон",
+      "frequency": 455.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/moscow/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "расчет газобетона",
+      "frequency": 451.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/moscow/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 400",
+      "frequency": 448.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон строй",
+      "frequency": 441.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 3",
+      "frequency": 440.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 10",
+      "frequency": 437.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "плиты из газобетона",
+      "frequency": 436.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "фасадный газобетон",
+      "frequency": 425.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "компания газобетон",
+      "frequency": 419.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит 600",
+      "frequency": 413.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон строительный",
+      "frequency": 413.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон отзывы",
+      "frequency": 412.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "толщина стен из газобетона",
+      "frequency": 407.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "сколько кубов газобетона",
+      "frequency": 406.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон фото",
+      "frequency": 391.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон м3",
+      "frequency": 385.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "бонолит купавна",
+      "frequency": 380.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон фундамент какой",
+      "frequency": 377.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "фундамент",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "постройка газобетона",
+      "frequency": 369.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 250",
+      "frequency": 365.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "армирование газобетона",
+      "frequency": 363.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "конструкции",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 300",
+      "frequency": 363.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 5",
+      "frequency": 350.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон разница",
+      "frequency": 350.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "плотность газобетона",
+      "frequency": 348.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "как сделать газобетон",
+      "frequency": 345.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "мансарда газобетон",
+      "frequency": 344.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "пила по газобетону",
+      "frequency": 341.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "размер блока газобетона",
+      "frequency": 334.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/moscow/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "блоки бонолит цена",
+      "frequency": 333.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1"
+    }
+  ],
+  "spb": [
+    {
+      "query": "газобетон",
+      "frequency": 41131.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки",
+      "frequency": 4698.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон спб",
+      "frequency": 3763.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: СПб",
+      "page": "/spb/catalog/",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон",
+      "frequency": 2845.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон купить в спб",
+      "frequency": 2621.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена",
+      "frequency": 2019.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон ключ",
+      "frequency": 1841.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько газобетона",
+      "frequency": 1771.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/spb/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "какой газобетон",
+      "frequency": 1560.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "стена из газобетона",
+      "frequency": 1535.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "одноэтажный из газобетона",
+      "frequency": 1493.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон лср купить",
+      "frequency": 1410.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: LSR",
+      "page": "/spb/catalog/lsr",
+      "priority": "1"
+    },
+    {
+      "query": "лср газобетон купить",
+      "frequency": 1298.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон блок",
+      "frequency": 1225.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "лср газобетон",
+      "frequency": 1190.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон купить в спб gazobeton-spb",
+      "frequency": 1143.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон купить",
+      "frequency": 1000.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки купить в спб",
+      "frequency": 906.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки купить",
+      "frequency": 826.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "куб газобетона",
+      "frequency": 766.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "кубе газобетон",
+      "frequency": 766.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "стоимость газобетона",
+      "frequency": 729.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки цена",
+      "frequency": 724.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон в спб от производителя дешево",
+      "frequency": 716.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки лср купить в спб",
+      "frequency": 697.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетонные блоки",
+      "frequency": 697.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "нужен газобетон",
+      "frequency": 696.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки размеры и цены",
+      "frequency": 672.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон в спб от производителя",
+      "frequency": 671.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "построил из газобетона",
+      "frequency": 657.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон ск купить в спб",
+      "frequency": 652.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена спб",
+      "frequency": 645.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон лср в спб",
+      "frequency": 642.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: LSR",
+      "page": "/spb/catalog/lsr",
+      "priority": "1"
+    },
+    {
+      "query": "толщина газобетона",
+      "frequency": 636.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "стоит газобетон",
+      "frequency": 621.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "баня из газобетона",
+      "frequency": 617.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "1 газобетон",
+      "frequency": 610.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон в спб",
+      "frequency": 584.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько стоит газобетон",
+      "frequency": 578.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон ленинградская область",
+      "frequency": 577.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон d400",
+      "frequency": 540.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон размеры",
+      "frequency": 516.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон ск официальный сайт",
+      "frequency": 512.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 100",
+      "frequency": 507.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "отделка газобетона",
+      "frequency": 507.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон производители",
+      "frequency": 500.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки купить в спб от производителя",
+      "frequency": 498.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон от производителя",
+      "frequency": 496.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "u блоки газобетон купить в спб",
+      "frequency": 495.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "гараж из газобетона",
+      "frequency": 458.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон крыша",
+      "frequency": 427.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "чем хорош газобетон",
+      "frequency": 409.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "калькулятор газобетона",
+      "frequency": 406.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/spb/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонный блок спб",
+      "frequency": 391.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "какой газобетон лучше",
+      "frequency": 389.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "производители газобетона в спб",
+      "frequency": 389.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "сколько кубов газобетона",
+      "frequency": 386.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 400",
+      "frequency": 371.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон снаружи",
+      "frequency": 369.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки цена gazobeton-spb",
+      "frequency": 364.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 2",
+      "frequency": 360.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон своими руками",
+      "frequency": 360.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон купить gazobeton-spb",
+      "frequency": 358.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон d500",
+      "frequency": 356.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон gazobeton-spb",
+      "frequency": 352.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон кв м",
+      "frequency": 348.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "м из газобетона",
+      "frequency": 346.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 150",
+      "frequency": 340.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон строй",
+      "frequency": 340.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки купить в спб gazobeton-spb",
+      "frequency": 326.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 250",
+      "frequency": 324.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетонные блоки gazobeton-spb",
+      "frequency": 312.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки купить gazobeton-spb",
+      "frequency": 307.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "фундамент для газобетона",
+      "frequency": 304.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "фундамент",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 200",
+      "frequency": 303.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон строительный",
+      "frequency": 302.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "поддон газобетона",
+      "frequency": 301.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки размеры",
+      "frequency": 292.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон 8",
+      "frequency": 289.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон отзывы",
+      "frequency": 286.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "расчет газобетона",
+      "frequency": 286.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/spb/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "6 6 газобетон",
+      "frequency": 285.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "вес газобетона",
+      "frequency": 279.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "сайт газобетон",
+      "frequency": 277.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон официальный",
+      "frequency": 273.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/spb/catalog/-",
+      "priority": "1"
+    },
+    {
+      "query": "плиты из газобетона",
+      "frequency": 272.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "утепление газобетона",
+      "frequency": 272.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "утепление",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон петербург",
+      "frequency": 270.0,
+      "competition": "высокая",
+      "intent": "брендовый",
+      "cluster": "бренд: СПб",
+      "page": "/spb/catalog/",
+      "priority": "1"
+    },
+    {
+      "query": "ленобласть газобетон",
+      "frequency": 267.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон м3",
+      "frequency": 265.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон санкт петербург",
+      "frequency": 262.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон внутри",
+      "frequency": 261.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "компания газобетон",
+      "frequency": 259.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "пена для газобетона",
+      "frequency": 255.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон официальный сайт",
+      "frequency": 247.0,
+      "competition": "",
+      "intent": "брендовый",
+      "cluster": "бренд: Официальный сайт",
+      "page": "/spb/catalog/-",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки размеры и цены gazobeton-spb",
+      "frequency": 246.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки мм",
+      "frequency": 245.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "плотность газобетона",
+      "frequency": 238.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон ск",
+      "frequency": 237.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "стены из газобетонных блоков",
+      "frequency": 237.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "1"
+    }
+  ],
+  "ufa": [
+    {
+      "query": "газоблок",
+      "frequency": 8622.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон",
+      "frequency": 5172.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетонные блоки",
+      "frequency": 1252.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько газоблок",
+      "frequency": 987.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок цена",
+      "frequency": 811.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "дом из газоблока",
+      "frequency": 775.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок уфа",
+      "frequency": 697.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "купить газоблок",
+      "frequency": 561.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "баня из газоблока",
+      "frequency": 398.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок размеры",
+      "frequency": 379.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "лучший газоблок",
+      "frequency": 360.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблоки какие",
+      "frequency": 358.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "куб газоблока",
+      "frequency": 356.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблоки для строительства",
+      "frequency": 283.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "нужен газоблок",
+      "frequency": 283.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок за штуку",
+      "frequency": 270.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок 600х300х200",
+      "frequency": 260.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок уфа цены",
+      "frequency": 251.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблоки стоя",
+      "frequency": 244.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "сколько газобетона",
+      "frequency": 242.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/ufa/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "какой газобетон",
+      "frequency": 237.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "купить газобетон",
+      "frequency": 234.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "кладка газоблока",
+      "frequency": 233.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон блок",
+      "frequency": 224.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "одноэтажный из газобетона",
+      "frequency": 224.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "сколько стоит газоблок",
+      "frequency": 224.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок цена за штуку",
+      "frequency": 219.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон уфа",
+      "frequency": 218.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок сколько штук",
+      "frequency": 217.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "стена из газобетона",
+      "frequency": 216.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "стена из газоблока",
+      "frequency": 216.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "баня из газобетона",
+      "frequency": 205.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "калькулятор газоблока",
+      "frequency": 202.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/ufa/calculator",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок в кубе",
+      "frequency": 201.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "1"
+    },
+    {
+      "query": "газоблок купить в уфе",
+      "frequency": 200.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/ufa/catalog",
+      "priority": "1"
+    },
+    {
+      "query": "газобетон цена",
+      "frequency": 187.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "поддон газоблока",
+      "frequency": 183.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 1",
+      "frequency": 173.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок сколько нужно",
+      "frequency": 165.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/ufa/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "клей для газоблока",
+      "frequency": 160.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "инструменты",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 600х300х200 цена",
+      "frequency": 154.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "минусы газоблока",
+      "frequency": 147.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки уфа",
+      "frequency": 146.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок плюсы",
+      "frequency": 141.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "купить газобетонные блоки",
+      "frequency": 139.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок плюсы и минусы",
+      "frequency": 137.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько газоблоков в кубе",
+      "frequency": 137.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько куб газоблока в кубе",
+      "frequency": 137.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько кубов в газоблоке",
+      "frequency": 137.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "пеноблок или газоблок",
+      "frequency": 135.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько газоблоков на дом",
+      "frequency": 130.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько газоблоков в поддоне",
+      "frequency": 123.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 250",
+      "frequency": 114.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок строй",
+      "frequency": 114.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок своими руками",
+      "frequency": 111.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "нужен газобетон",
+      "frequency": 110.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок цена за штуку уфа",
+      "frequency": 109.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон своими руками",
+      "frequency": 108.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон размеры",
+      "frequency": 107.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "фундамент для газобетона",
+      "frequency": 107.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "фундамент",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "толщина газоблока",
+      "frequency": 106.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон крыша",
+      "frequency": 104.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "блоки газоблоки",
+      "frequency": 103.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок производители",
+      "frequency": 102.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 600",
+      "frequency": 101.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "кладу газоблоки",
+      "frequency": 101.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "ложу газоблоки",
+      "frequency": 101.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "армопояс для газобетона",
+      "frequency": 99.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "конструкции",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок проекты",
+      "frequency": 99.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетонные блоки цена",
+      "frequency": 97.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 600х300х200 за штуку",
+      "frequency": 96.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 100",
+      "frequency": 95.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 400",
+      "frequency": 95.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок окна",
+      "frequency": 95.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "гараж из газоблока",
+      "frequency": 95.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "гараж из газобетона",
+      "frequency": 94.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "куб газобетона",
+      "frequency": 94.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "кубе газобетон",
+      "frequency": 94.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "построил из газобетона",
+      "frequency": 94.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "калькулятор газобетона",
+      "frequency": 93.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/ufa/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок или керамзитоблок",
+      "frequency": 92.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "расчет газоблока",
+      "frequency": 91.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/ufa/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "сколько нужно газоблока на дом",
+      "frequency": 91.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/ufa/calculator",
+      "priority": "2"
+    },
+    {
+      "query": "минусы газобетона",
+      "frequency": 90.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок отзывы",
+      "frequency": 89.0,
+      "competition": "высокая",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок цена за куб",
+      "frequency": 88.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "лучшие газоблоки для строительства",
+      "frequency": 88.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 300",
+      "frequency": 87.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблок 600х300х200 цена за штуку",
+      "frequency": 86.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "что лучше пеноблок или газоблок",
+      "frequency": 86.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон плюсы",
+      "frequency": 83.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "построить из газоблока",
+      "frequency": 83.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "стоимость газоблока",
+      "frequency": 83.0,
+      "competition": "высокая",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон 100",
+      "frequency": 82.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "1 газобетон",
+      "frequency": 81.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "купить газоблоки цена",
+      "frequency": 81.0,
+      "competition": "",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/ufa/catalog",
+      "priority": "2"
+    },
+    {
+      "query": "стоит газобетон",
+      "frequency": 81.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газобетон плюсы и минусы",
+      "frequency": 80.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "газоблока внутри",
+      "frequency": 80.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    },
+    {
+      "query": "сколько газоблока 600х300х200",
+      "frequency": 80.0,
+      "competition": "",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "samara": [
+    {
+      "query": "газобетонные блоки",
+      "frequency": 1785.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "баня из газоблока",
+      "frequency": 266.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "1",
+      "notes": "Сделать подборку проектов и расчеты материалов"
+    },
+    {
+      "query": "газоблок размеры",
+      "frequency": 236.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1",
+      "notes": "Добавить таблицы характеристик и FAQ по параметрам"
+    },
+    {
+      "query": "баня из газобетона",
+      "frequency": 226.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "проекты зданий",
+      "page": "/samara/catalog",
+      "priority": "1",
+      "notes": "Сделать подборку проектов и расчеты материалов"
+    },
+    {
+      "query": "газоблок цена сгзсб",
+      "frequency": 163.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    },
+    {
+      "query": "стоимость газоблока за штуку в самаре",
+      "frequency": 147.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "газобетон размеры",
+      "frequency": 146.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/samara/catalog",
+      "priority": "2",
+      "notes": "Добавить таблицы характеристик и FAQ по параметрам"
+    },
+    {
+      "query": "газобетонные блоки от производителя цена купить",
+      "frequency": 139.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/samara/catalog",
+      "priority": "2",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "калькулятор газобетона",
+      "frequency": 139.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/samara/calculator",
+      "priority": "2",
+      "notes": "Дополнить калькулятор пояснениями и CTA"
+    },
+    {
+      "query": "калькулятор газоблока",
+      "frequency": 131.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/samara/calculator",
+      "priority": "2",
+      "notes": "Дополнить калькулятор пояснениями и CTA"
+    },
+    {
+      "query": "газоблоки в самаре цены сгзсб",
+      "frequency": 126.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: СГЗСБ",
+      "page": "/samara/catalog/",
+      "priority": "2",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    },
+    {
+      "query": "сколько газоблоков в кубе",
+      "frequency": 119.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газоблоки в самаре цены",
+      "frequency": 106.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/samara/catalog",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    }
+  ],
+  "moscow": [
+    {
+      "query": "газобетон цена за куб",
+      "frequency": 521.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/moscow/catalog",
+      "priority": "1",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "перекрытие из газобетона",
+      "frequency": 507.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетонные блоки bonolit",
+      "frequency": 226.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    },
+    {
+      "query": "bonolit официальный сайт",
+      "frequency": 207.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "1",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    },
+    {
+      "query": "газобетон бонолит цена",
+      "frequency": 156.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "2",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    },
+    {
+      "query": "газобетон istkult",
+      "frequency": 150.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/moscow/catalog",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетон цена за м3",
+      "frequency": 128.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/moscow/catalog",
+      "priority": "2",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "блоки bonolit",
+      "frequency": 125.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "2",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    },
+    {
+      "query": "газобетон цена за куб в москве",
+      "frequency": 118.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/moscow/catalog",
+      "priority": "2",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "bonolit блоки",
+      "frequency": 101.0,
+      "competition": "средняя",
+      "intent": "брендовый",
+      "cluster": "бренд: Bonolit",
+      "page": "/moscow/catalog/bonolit",
+      "priority": "2",
+      "notes": "Подготовить бренд-лендинг с описанием завода и фильтром"
+    }
+  ],
+  "spb": [
+    {
+      "query": "газобетонные блоки купить в спб от производителя",
+      "frequency": 498.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетонные блоки цена gazobeton-spb",
+      "frequency": 364.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "газобетон купить gazobeton-spb",
+      "frequency": 358.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "купить газобетон gazobeton-spb",
+      "frequency": 352.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетонные блоки купить в спб gazobeton-spb",
+      "frequency": 326.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "купить газобетонные блоки gazobeton-spb",
+      "frequency": 312.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетонные блоки купить gazobeton-spb",
+      "frequency": 307.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетонные блоки размеры",
+      "frequency": 292.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Добавить таблицы характеристик и FAQ по параметрам"
+    },
+    {
+      "query": "газобетонные блоки размеры и цены gazobeton-spb",
+      "frequency": 246.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "характеристики",
+      "page": "/spb/catalog",
+      "priority": "1",
+      "notes": "Добавить таблицы характеристик и FAQ по параметрам"
+    },
+    {
+      "query": "газобетон купить в спб от производителя d500",
+      "frequency": 161.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетон купить в спб цена за м3",
+      "frequency": 150.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "производитель газобетонных блоков",
+      "frequency": 148.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "общий спрос",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "перегородки из газобетонных блоков",
+      "frequency": 147.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "перегородки",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Выделить раздел про перегородки, указать размеры"
+    },
+    {
+      "query": "газобетон купить в спб цена от производителя",
+      "frequency": 146.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "цены",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Актуализировать блок цен и условия покупки"
+    },
+    {
+      "query": "производители газобетонных блоков",
+      "frequency": 146.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетон d600 купить в спб",
+      "frequency": 144.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    },
+    {
+      "query": "газобетон в петербурге купить",
+      "frequency": 143.0,
+      "competition": "средняя",
+      "intent": "коммерческий",
+      "cluster": "покупка",
+      "page": "/spb/catalog",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    }
+  ],
+  "ufa": [
+    {
+      "query": "баня из газоблока",
+      "frequency": 398.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "проекты зданий",
+      "page": "/construction",
+      "priority": "1",
+      "notes": "Сделать подборку проектов и расчеты материалов"
+    },
+    {
+      "query": "газоблок размеры",
+      "frequency": 379.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "характеристики",
+      "page": "/construction",
+      "priority": "1",
+      "notes": "Добавить таблицы характеристик и FAQ по параметрам"
+    },
+    {
+      "query": "калькулятор газоблока",
+      "frequency": 202.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "калькулятор",
+      "page": "/ufa/calculator",
+      "priority": "1",
+      "notes": "Дополнить калькулятор пояснениями и CTA"
+    },
+    {
+      "query": "сколько газоблоков в кубе",
+      "frequency": 137.0,
+      "competition": "средняя",
+      "intent": "информационный",
+      "cluster": "общий спрос",
+      "page": "/construction",
+      "priority": "2",
+      "notes": "Расширить контент и CTA под региональные запросы"
+    }
+  ]
+}

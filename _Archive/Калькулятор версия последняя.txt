@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор газобетона</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .calculator-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .calculator-form {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #FFCF33;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(255, 207, 51, 0.1);
+        }
+
+        input:disabled {
+            background-color: #f3f4f6;
+            color: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .results {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid #FFCF33;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: #1f2937;
+            font-size: 18px;
+        }
+
+        .price-teaser {
+            background: #fef3c7;
+            border: 2px dashed #FFCF33;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .price-teaser:hover {
+            background: #FFCF33;
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FFCF33 0%, #fbbf24 100%);
+            color: #1f2937;
+            box-shadow: 0 4px 15px rgba(255, 207, 51, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 207, 51, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .toggle-btn {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .advanced-params {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 15px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 600px;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            color: white;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            color: #6b7280;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 10px;
+        }
+
+        .step.active {
+            background: #FFCF33;
+            color: #1f2937;
+        }
+
+        .step.completed {
+            background: #10b981;
+            color: white;
+        }
+
+        .step-content {
+            display: none;
+            width: 100%;
+            min-height: 200px;
+        }
+
+        .step-content.active {
+            display: block !important;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.2s ease;
+        }
+
+        .checkbox-item:hover {
+            background: #f3f4f6;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .radio-item {
+            margin: 12px 0;
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.2s ease;
+        }
+
+        .radio-item:hover {
+            background: #f3f4f6;
+        }
+
+        .radio-item input[type="radio"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .bonus-list {
+            background: #f0f9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .success-screen {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .communication-btn {
+            padding: 10px 15px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: #1f2937;
+        }
+
+        .communication-btn.active,
+        .communication-btn:hover {
+            border-color: #FFCF33;
+            background: #FFCF33;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .honeypot {
+            display: none;
+        }
+
+        .privacy-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .privacy-checkbox input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .privacy-checkbox label {
+            margin: 0;
+            font-size: 14px;
+            font-weight: normal;
+            color: #374151;
+        }
+
+        .privacy-checkbox a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .privacy-checkbox a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .calculator-form {
+                padding: 20px;
+            }
+
+            .modal-content {
+                width: 95vw;
+            }
+
+            .modal-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="header">
+            <h1>Калькулятор газобетона</h1>
+            <p>Точный расчет материалов для вашего дома</p>
+        </div>
+
+        <div class="calculator-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="houseLength">Длина дома (м)</label>
+                    <input type="number" id="houseLength" value="10" min="1" max="50" step="0.5">
+                </div>
+                <div class="form-group">
+                    <label for="houseWidth">Ширина дома (м)</label>
+                    <input type="number" id="houseWidth" value="8" min="1" max="50" step="0.5">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="perimeter">Общая длина стен (периметр, м)</label>
+                <input type="number" id="perimeter" value="36" min="1" max="200" step="0.5">
+                <small style="color: #6b7280; font-size: 12px; margin-top: 5px; display: block;">
+                    При вводе периметра поля длина/ширина блокируются
+                </small>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="wallHeight">Высота стен (м)</label>
+                    <input type="number" id="wallHeight" value="3" min="2" max="15" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="blockThickness">Толщина блока (мм)</label>
+                    <select id="blockThickness">
+                        <option value="200">200 мм</option>
+                        <option value="250">250 мм</option>
+                        <option value="300">300 мм</option>
+                        <option value="375">375 мм</option>
+                        <option value="400" selected>400 мм</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <button type="button" class="toggle-btn" id="toggleAdvanced">
+                    <span id="advancedIcon">▼</span> Дополнительные параметры
+                </button>
+                
+                <div id="advancedParameters" class="advanced-params" style="display: none;">
+                    <h4 style="margin: 0 0 20px 0; color: #374151;">Оконные проемы</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="windowsCount">Количество окон (шт)</label>
+                            <input type="number" id="windowsCount" value="0" min="0" max="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="windowHeight">Высота окна (м)</label>
+                            <input type="number" id="windowHeight" value="1.5" min="0.5" max="5" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="windowWidth">Ширина окна (м)</label>
+                        <input type="number" id="windowWidth" value="1.5" min="0.5" max="5" step="0.1">
+                    </div>
+
+                    <h4 style="margin: 25px 0 15px 0; color: #374151;">Дверные проемы</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="doorsCount">Количество дверей (шт)</label>
+                            <input type="number" id="doorsCount" value="0" min="0" max="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="doorHeight">Высота двери (м)</label>
+                            <input type="number" id="doorHeight" value="2.1" min="1" max="3" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="doorWidth">Ширина двери (м)</label>
+                        <input type="number" id="doorWidth" value="0.9" min="0.5" max="3" step="0.1">
+                    </div>
+
+                    <h4 style="margin: 25px 0 15px 0; color: #374151;">Фронтоны</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gableCount">Количество фронтонов (шт)</label>
+                            <input type="number" id="gableCount" value="0" min="0" max="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="gableHeight">Высота фронтона (м)</label>
+                            <input type="number" id="gableHeight" value="2" min="0.5" max="10" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gableWidth">Ширина основания фронтона (м)</label>
+                        <input type="number" id="gableWidth" value="10" min="1" max="50" step="0.1">
+                    </div>
+
+                    <h4 style="margin: 25px 0 15px 0; color: #374151;">Внутренние перегородки</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="partitionsLength">Общая длина перегородок (м)</label>
+                            <input type="number" id="partitionsLength" value="0" min="0" max="200" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="partitionsHeight">Высота перегородок (м)</label>
+                            <input type="number" id="partitionsHeight" value="2.5" min="1" max="5" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="partitionsThickness">Толщина перегородок</label>
+                        <select id="partitionsThickness">
+                            <option value="100">100 мм</option>
+                            <option value="150">150 мм</option>
+                            <option value="200">200 мм</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="result-item">
+                    <span class="result-label">Количество блоков:</span>
+                    <span class="result-value" id="blocksCount">0 шт</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Объем:</span>
+                    <span class="result-value" id="volume">0.0 м³</span>
+                </div>
+                <div class="price-teaser" id="priceTeaser">
+                    <strong id="priceText">💰 Рассчитать стоимость с доставкой</strong>
+                </div>
+            </div>
+
+            <div style="text-align: center; color: #6b7280; margin: 20px 0;">
+                Чтобы посчитать стоимость в Вашем регионе, с учетом клея, армирования и доставки, уточните параметры →
+            </div>
+
+            <button class="btn btn-primary" id="getDetailedCalculation">
+                📊 Детальный расчет
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="calculatorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Детальный расчет</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step" data-step="3">3</div>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="step-content active" id="step1">
+                    <h3>Уточнение расчета</h3>
+                    <p style="margin-bottom: 20px; color: #6b7280; line-height: 1.5;">
+                        Уточните дополнительные параметры для более точного расчета количества и стоимости материала.
+                    </p>
+
+                    <h4 style="margin: 25px 0 15px 0; color: #374151;">Дополнительные материалы и услуги</h4>
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="addGlue">
+                            <label for="addGlue">Добавить расчет клея</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="addReinforcement">
+                            <label for="addReinforcement">Добавить армирование</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="needDelivery">
+                            <label for="needDelivery">Нужна доставка</label>
+                        </div>
+                        <div id="deliveryAddressGroup" style="display: none; margin-top: 0; margin-left: 20px;">
+                            <label for="deliveryAddress">Адрес доставки</label>
+                            <input type="text" id="deliveryAddress" placeholder="Укажите город/населенный пункт" style="margin-top: 5px;">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="nextStep(2)" style="margin-top: 30px;">Далее →</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-content" id="step2">
+                    <h3>Планы строительства</h3>
+                    <p style="margin-bottom: 20px; color: #6b7280; line-height: 1.5;">
+                        Поделитесь планами, мы пришлем наиболее актуальную для Вас информацию
+                    </p>
+                    
+                    <div class="bonus-list">
+                        <div class="bonus-item">
+                            <span>✅</span> Точный расчет с учетом всех параметров
+                        </div>
+                        <div class="bonus-item">
+                            <span>✅</span> Сравнение цен 3 поставщиков в Вашем регионе
+                        </div>
+                        <div class="bonus-item">
+                            <strong>БОНУС:</strong> Книга "Строим просто!" - как построить качественный дом и сэкономить от 800.000 рублей?
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Когда планируете покупку:</label>
+                        <div style="margin: 15px 0;">
+                            <div class="radio-item">
+                                <input type="radio" name="purchaseTime" id="urgent" value="urgent">
+                                <label for="urgent" style="display: inline; margin-left: 8px;">Срочно / в ближайшее время</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="purchaseTime" id="months1-3" value="1-3months" checked>
+                                <label for="months1-3" style="display: inline; margin-left: 8px;">В течении 1-3 месяцев</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="purchaseTime" id="halfyear" value="halfyear">
+                                <label for="halfyear" style="display: inline; margin-left: 8px;">В течении полугода</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="purchaseTime" id="year" value="year">
+                                <label for="year" style="display: inline; margin-left: 8px;">В течении года</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="purchaseTime" id="browsing" value="browsing">
+                                <label for="browsing" style="display: inline; margin-left: 8px;">Пока прицениваюсь</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 15px; margin-top: 30px;">
+                        <button class="btn" style="background: #e5e7eb; color: #374151; flex: 1;" onclick="prevStep(1)">← Назад</button>
+                        <button class="btn btn-primary" style="flex: 2;" onclick="nextStep(3)">Далее →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-content" id="step3">
+                    <h3>Пришлем расчет и ссылку на книгу</h3>
+                    <p style="margin-bottom: 20px; color: #6b7280; line-height: 1.5;">
+                        Никаких навязчивых звонков - отправим информацию в удобный мессенджер.
+                    </p>
+
+                    <div class="bonus-list">
+                        <div class="bonus-item">
+                            <span>✅</span> Точный расчет с учетом всех параметров
+                        </div>
+                        <div class="bonus-item">
+                            <span>✅</span> Сравнение цен 3 поставщиков в Вашем регионе
+                        </div>
+                        <div class="bonus-item">
+                            <strong>БОНУС:</strong> Книга "Строим просто!" - как построить качественный дом и сэкономить от 800.000 рублей?
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userName">Ваше имя *</label>
+                        <input type="text" id="userName" required placeholder="Как к вам обращаться?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userPhone">Телефон *</label>
+                        <input type="tel" id="userPhone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Удобный способ связи:</label>
+                        <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+                            <button type="button" class="communication-btn active" data-method="whatsapp">📱 WhatsApp</button>
+                            <button type="button" class="communication-btn" data-method="telegram">✈️ Telegram</button>
+                            <button type="button" class="communication-btn" data-method="call">📞 Позвонить</button>
+                        </div>
+                    </div>
+
+                    <div class="privacy-checkbox">
+                        <input type="checkbox" id="privacyConsent" required>
+                        <label for="privacyConsent">
+                            Согласен с <a href="/confidence/" target="_blank">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <input type="text" class="honeypot" name="website" tabindex="-1" autocomplete="off">
+
+                    <div style="display: flex; gap: 15px; margin-top: 30px;">
+                        <button class="btn" style="background: #e5e7eb; color: #374151; flex: 1;" onclick="prevStep(2)">← Назад</button>
+                        <button class="btn btn-primary" style="flex: 2;" onclick="submitForm()">🎁 Получить расчет</button>
+                    </div>
+                </div>
+
+                <!-- Success Screen -->
+                <div class="step-content" id="successScreen" style="display: none;">
+                    <div class="success-screen">
+                        <div class="success-icon">🎉</div>
+                        <h2>Заявка на расчет отправлена!</h2>
+                        <div class="bonus-list">
+                            <div class="bonus-item">
+                                <span>✅</span> Книга "Как сэкономить от 800.000₽ на строительстве" - пришлем ссылку на скачивание
+                            </div>
+                            <div class="bonus-item">
+                                <span>✅</span> В ближайшее время наш менеджер посчитает самый выгодный для Вас вариант и свяжется указанным способом!
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="closeModal()">Отлично!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const regionPrices = {
+            'samara': { block: 6800, glue: 350 }
+        };
+
+        let calculationData = {};
+        let leadScore = 0;
+        let sessionStartTime = Date.now();
+        let currentStep = 1;
+        let selectedCommunicationMethod = 'whatsapp';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFromStorage();
+            calculateBasic();
+            bindEvents();
+            leadScore += 10;
+        });
+
+        function bindEvents() {
+            ['houseLength', 'houseWidth', 'perimeter', 'wallHeight', 'blockThickness'].forEach(id => {
+                document.getElementById(id).addEventListener('input', handleInputChange);
+            });
+
+            ['windowsCount', 'windowHeight', 'windowWidth', 'doorsCount', 'doorHeight', 'doorWidth', 'gableCount', 'gableHeight', 'gableWidth', 'partitionsLength', 'partitionsHeight', 'partitionsThickness'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculateBasic);
+            });
+
+            document.getElementById('getDetailedCalculation').addEventListener('click', openModal);
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+            document.getElementById('priceTeaser').addEventListener('click', openModal);
+
+            document.getElementById('toggleAdvanced').addEventListener('click', function() {
+                const advanced = document.getElementById('advancedParameters');
+                const icon = document.getElementById('advancedIcon');
+                
+                if (advanced.style.display === 'none') {
+                    advanced.style.display = 'block';
+                    icon.textContent = '▲';
+                } else {
+                    advanced.style.display = 'none';
+                    icon.textContent = '▼';
+                }
+            });
+
+            document.getElementById('userPhone').addEventListener('input', formatPhone);
+
+            document.querySelectorAll('.communication-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.communication-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedCommunicationMethod = this.dataset.method;
+                });
+            });
+
+            document.getElementById('needDelivery').addEventListener('change', function() {
+                const addressGroup = document.getElementById('deliveryAddressGroup');
+                addressGroup.style.display = this.checked ? 'block' : 'none';
+            });
+
+            setTimeout(() => { leadScore += 10; }, 60000);
+            setTimeout(() => { leadScore += 10; }, 180000);
+        }
+
+        function handleInputChange(event) {
+            const fieldId = event.target.id;
+            
+            if (fieldId === 'perimeter') {
+                if (event.target.value.trim() !== '') {
+                    document.getElementById('houseLength').disabled = true;
+                    document.getElementById('houseWidth').disabled = true;
+                    document.getElementById('houseLength').value = '';
+                    document.getElementById('houseWidth').value = '';
+                } else {
+                    document.getElementById('houseLength').disabled = false;
+                    document.getElementById('houseWidth').disabled = false;
+                }
+            } else if (fieldId === 'houseLength' || fieldId === 'houseWidth') {
+                if (!document.getElementById('houseLength').disabled && !document.getElementById('houseWidth').disabled) {
+                    updatePerimeter();
+                }
+            }
+            
+            calculateBasic();
+            saveToStorage();
+        }
+
+        function updatePerimeter() {
+            const length = parseFloat(document.getElementById('houseLength').value) || 0;
+            const width = parseFloat(document.getElementById('houseWidth').value) || 0;
+            if (length > 0 && width > 0) {
+                const perimeter = (length + width) * 2;
+                document.getElementById('perimeter').value = perimeter;
+            }
+        }
+
+        function calculateBasic() {
+            const perimeter = parseFloat(document.getElementById('perimeter').value) || 0;
+            const height = parseFloat(document.getElementById('wallHeight').value) || 0;
+            const thickness = parseFloat(document.getElementById('blockThickness').value) || 400;
+
+            if (perimeter < 1 || height < 0.1) {
+                document.getElementById('blocksCount').textContent = '0 шт';
+                document.getElementById('volume').textContent = '0.0 м³';
+                return;
+            }
+
+            let wallArea = perimeter * height;
+            let volumeGross = wallArea * (thickness / 1000);
+
+            const windowsCount = parseInt(document.getElementById('windowsCount').value) || 0;
+            const windowHeight = parseFloat(document.getElementById('windowHeight').value) || 1.5;
+            const windowWidth = parseFloat(document.getElementById('windowWidth').value) || 1.5;
+            const windowArea = windowsCount * windowHeight * windowWidth;
+            
+            const doorsCount = parseInt(document.getElementById('doorsCount').value) || 0;
+            const doorHeight = parseFloat(document.getElementById('doorHeight').value) || 2.1;
+            const doorWidth = parseFloat(document.getElementById('doorWidth').value) || 0.9;
+            const doorArea = doorsCount * doorHeight * doorWidth;
+            
+            const openingsVolume = (windowArea + doorArea) * (thickness / 1000);
+
+            const gableCount = parseInt(document.getElementById('gableCount').value) || 0;
+            const gableHeight = parseFloat(document.getElementById('gableHeight').value) || 2;
+            const gableWidth = parseFloat(document.getElementById('gableWidth').value) || 10;
+            const gablesVolume = gableCount * (0.5 * gableWidth * gableHeight * (thickness / 1000));
+
+            const partitionsLength = parseFloat(document.getElementById('partitionsLength').value) || 0;
+            const partitionsHeight = parseFloat(document.getElementById('partitionsHeight').value) || 2.5;
+            const partitionsThickness = parseFloat(document.getElementById('partitionsThickness').value) || 100;
+            const partitionsVolume = partitionsLength * partitionsHeight * (partitionsThickness / 1000);
+
+            const volumeNet = volumeGross - openingsVolume + gablesVolume + partitionsVolume;
+            const volumeWithReserve = Math.max(0, volumeNet * 1.05);
+            const blocksCount = Math.ceil(volumeWithReserve / (0.625 * 0.25 * (thickness / 1000)));
+
+            document.getElementById('blocksCount').textContent = `${blocksCount} шт`;
+            document.getElementById('volume').textContent = `${volumeWithReserve.toFixed(1)} м³`;
+
+            saveToStorage();
+        }
+
+        function openModal() {
+            document.getElementById('calculatorModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            leadScore += 15;
+        }
+
+        function closeModal() {
+            document.getElementById('calculatorModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextStep(step) {
+            document.querySelector('.step-content.active').classList.remove('active');
+            document.querySelector('.step.active').classList.add('completed');
+            document.querySelector('.step.active').classList.remove('active');
+
+            document.getElementById(`step${step}`).classList.add('active');
+            document.querySelector(`.step[data-step="${step}"]`).classList.add('active');
+            
+            currentStep = step;
+
+            if (step === 3) {
+                calculateDetailed();
+            }
+        }
+
+        function prevStep(step) {
+            document.querySelector('.step-content.active').classList.remove('active');
+            document.querySelector('.step.active').classList.remove('active');
+            
+            const completedSteps = document.querySelectorAll('.step.completed');
+            if (completedSteps.length > 0) {
+                completedSteps[completedSteps.length - 1].classList.remove('completed');
+            }
+
+            document.getElementById(`step${step}`).classList.add('active');
+            document.querySelector(`.step[data-step="${step}"]`).classList.add('active');
+            
+            currentStep = step;
+        }
+
+        function calculateDetailed() {
+            const prices = regionPrices['samara'];
+            
+            const volumeWithReserve = parseFloat(document.getElementById('volume').textContent) || 0;
+            const thickness = parseFloat(document.getElementById('blockThickness').value) || 400;
+            const perimeter = parseFloat(document.getElementById('perimeter').value) || 0;
+            const height = parseFloat(document.getElementById('wallHeight').value) || 0;
+            
+            const blocksCount = Math.ceil(volumeWithReserve / (0.625 * 0.25 * (thickness / 1000)));
+            const blocksCost = volumeWithReserve * prices.block;
+
+            let additionalCosts = 0;
+            let additionalInfo = [];
+
+            if (document.getElementById('addGlue').checked) {
+                const glueAmount = Math.ceil((volumeWithReserve * 25) / 25);
+                const glueCost = glueAmount * prices.glue;
+                additionalCosts += glueCost;
+                additionalInfo.push(`Клей: ${glueAmount} мешков (${glueCost.toLocaleString()} ₽)`);
+                leadScore += 5;
+            }
+
+            if (document.getElementById('addReinforcement').checked) {
+                const reinforcementLength = perimeter * Math.ceil(height / 0.75) * 2;
+                additionalInfo.push(`Арматура: ~${reinforcementLength} м`);
+                leadScore += 5;
+            }
+
+            if (document.getElementById('needDelivery').checked) {
+                const address = document.getElementById('deliveryAddress').value;
+                additionalInfo.push(`Доставка в ${address || 'указанный адрес'}: рассчитаем отдельно`);
+                leadScore += 10;
+            }
+
+            calculationData = {
+                region: 'samara',
+                volume: volumeWithReserve.toFixed(1),
+                blocksCount,
+                blocksCost: blocksCost.toFixed(0),
+                totalCost: (blocksCost + additionalCosts).toFixed(0),
+                additionalInfo,
+                leadScore
+            };
+        }
+
+        function submitForm() {
+    const name = document.getElementById('userName').value.trim();
+    const phone = document.getElementById('userPhone').value.trim();
+    const honeypot = document.querySelector('.honeypot').value;
+    const privacyConsent = document.getElementById('privacyConsent').checked;
+
+    if (!name) {
+        alert('Пожалуйста, укажите ваше имя');
+        return;
+    }
+
+    if (!phone || phone.length < 10) {
+        alert('Пожалуйста, укажите корректный номер телефона');
+        return;
+    }
+
+    if (!privacyConsent) {
+        alert('Необходимо согласие с политикой конфиденциальности');
+        return;
+    }
+
+    if (honeypot) {
+        return;
+    }
+
+    const purchaseTime = document.querySelector('input[name="purchaseTime"]:checked').value;
+    const timeScores = {
+        'urgent': 30,
+        '1-3months': 20,
+        'halfyear': 10,
+        'year': 5,
+        'browsing': 1
+    };
+    leadScore += timeScores[purchaseTime] || 1;
+
+    let leadType = '❄️ Холодный';
+    if (leadScore >= 70) leadType = '🔥 Горячий';
+    else if (leadScore >= 40) leadType = '🌡 Тёплый';
+
+    const formData = {
+        name,
+        phone: formatPhoneForSubmission(phone),
+        communicationMethod: selectedCommunicationMethod,
+        purchaseTime,
+        region: 'samara',
+        calculation: calculationData,
+        leadScore,
+        leadType,
+        timestamp: new Date().toISOString(),
+        sessionDuration: Math.round((Date.now() - sessionStartTime) / 1000),
+        houseLength: document.getElementById('houseLength').value,
+        houseWidth: document.getElementById('houseWidth').value,
+        perimeter: document.getElementById('perimeter').value,
+        wallHeight: document.getElementById('wallHeight').value,
+        blockThickness: document.getElementById('blockThickness').value,
+        windowsCount: document.getElementById('windowsCount').value,
+        windowHeight: document.getElementById('windowHeight').value,
+        windowWidth: document.getElementById('windowWidth').value,
+        doorsCount: document.getElementById('doorsCount').value,
+        doorHeight: document.getElementById('doorHeight').value,
+        doorWidth: document.getElementById('doorWidth').value,
+        gableCount: document.getElementById('gableCount').value,
+        gableHeight: document.getElementById('gableHeight').value,
+        gableWidth: document.getElementById('gableWidth').value,
+        partitionsLength: document.getElementById('partitionsLength').value,
+        partitionsHeight: document.getElementById('partitionsHeight').value,
+        partitionsThickness: document.getElementById('partitionsThickness').value,
+        deliveryAddress: document.getElementById('deliveryAddress').value,
+        additionalOptions: {
+            glue: document.getElementById('addGlue').checked,
+            reinforcement: document.getElementById('addReinforcement').checked,
+            delivery: document.getElementById('needDelivery').checked
+        }
+    };
+
+    // Показываем индикатор загрузки
+    const submitButtons = document.querySelectorAll('.btn-primary');
+    const submitButton = submitButtons[submitButtons.length - 1];
+    submitButton.disabled = true;
+    submitButton.innerHTML = '⏳ Отправка...';
+
+    // URL Google Apps Script веб-приложения
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDKuaQc2g_rT27qMn5X1NJD6-ntn5WStWk5Y50td8CSTlOAxqs81AQO6fpk9Ul6JhC/exec';
+
+    // Отправляем данные (без обработки ответа)
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    }).catch(error => {
+        console.error('Ошибка fetch:', error);
+    });
+
+    // Показываем успех через 1.5 секунды (один раз!)
+    setTimeout(() => {
+        console.log('Показываем экран успеха');
+        
+        // Скрываем ВСЕ step-content
+        document.querySelectorAll('.step-content').forEach(step => {
+            step.classList.remove('active');
+            step.style.display = 'none';
+        });
+        
+        // Показываем экран успеха
+        const successScreen = document.getElementById('successScreen');
+        if (successScreen) {
+            successScreen.style.display = 'block';
+            successScreen.classList.add('active');
+        }
+        
+        clearStorage();
+    }, 1500);
+}
+
+        function formatPhone(event) {
+            let value = event.target.value.replace(/\D/g, '');
+            
+            if (value.startsWith('8')) {
+                value = '7' + value.substring(1);
+            }
+            
+            if (value.startsWith('7')) {
+                value = value.substring(1);
+            }
+            
+            let formattedValue = '+7';
+            if (value.length > 0) {
+                formattedValue += ' (' + value.substring(0, 3);
+                if (value.length > 3) {
+                    formattedValue += ') ' + value.substring(3, 6);
+                    if (value.length > 6) {
+                        formattedValue += '-' + value.substring(6, 8);
+                        if (value.length > 8) {
+                            formattedValue += '-' + value.substring(8, 10);
+                        }
+                    }
+                }
+            }
+            
+            event.target.value = formattedValue;
+        }
+
+        function formatPhoneForSubmission(phone) {
+            return phone.replace(/\D/g, '');
+        }
+
+        function saveToStorage() {
+            const data = {
+                houseLength: document.getElementById('houseLength').value,
+                houseWidth: document.getElementById('houseWidth').value,
+                perimeter: document.getElementById('perimeter').value,
+                wallHeight: document.getElementById('wallHeight').value,
+                blockThickness: document.getElementById('blockThickness').value,
+                windowsCount: document.getElementById('windowsCount').value,
+                windowHeight: document.getElementById('windowHeight').value,
+                windowWidth: document.getElementById('windowWidth').value,
+                doorsCount: document.getElementById('doorsCount').value,
+                doorHeight: document.getElementById('doorHeight').value,
+                doorWidth: document.getElementById('doorWidth').value,
+                gableCount: document.getElementById('gableCount').value,
+                gableHeight: document.getElementById('gableHeight').value,
+                gableWidth: document.getElementById('gableWidth').value,
+                partitionsLength: document.getElementById('partitionsLength').value,
+                partitionsHeight: document.getElementById('partitionsHeight').value,
+                partitionsThickness: document.getElementById('partitionsThickness').value
+            };
+            localStorage.setItem('calculatorData', JSON.stringify(data));
+        }
+
+        function loadFromStorage() {
+            const saved = localStorage.getItem('calculatorData');
+            if (saved) {
+                const data = JSON.parse(saved);
+                Object.keys(data).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element && data[key]) {
+                        element.value = data[key];
+                    }
+                });
+                leadScore += 15;
+            }
+        }
+
+        function clearStorage() {
+            localStorage.removeItem('calculatorData');
+        }
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('calculatorModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('change', function() {
+            leadScore += 1;
+        });
+
+        if (localStorage.getItem('hasVisited')) {
+            leadScore += 15;
+        } else {
+            localStorage.setItem('hasVisited', 'true');
+        }
+    </script>
+</body>
+</html>
