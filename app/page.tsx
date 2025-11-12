@@ -120,27 +120,27 @@ export default function Home() {
       </nav>
       <main className="min-h-screen">
         {/* Hero-секция */}
-        <section className="bg-gradient-to-br from-orange-50 via-white to-gray-50 py-12 md:py-20" aria-labelledby="hero-heading">
+        <section className="bg-white py-8 md:py-12 lg:py-20" aria-labelledby="hero-heading">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
                 Газобетонные блоки — каталог и цены
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-8 px-2">
                 Большой выбор газобетона Ytong, Bonolit, Коттедж и других производителей. 
                 Актуальные цены, наличие на складе, доставка.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" role="group" aria-label="Основные действия">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2" role="group" aria-label="Основные действия">
                 <Link
                   href="#quiz"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-center"
                 >
                   Подобрать лучший вариант
                 </Link>
                 <Link
                   href="/construction"
-                  className="bg-white border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-semibold text-lg transition text-center"
+                  className="bg-white border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition text-center"
                 >
                   Как строить из газобетона?
                 </Link>
@@ -341,29 +341,30 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 mb-8">
               {popularBrands.map((brand) => (
                 <div
                   key={brand.slug}
-                  className="bg-gray-50 hover:bg-orange-50 rounded-xl p-6 text-center transition group border-2 border-transparent hover:border-orange-200 shadow-sm hover:shadow-md"
+                  className="bg-gray-50 hover:bg-orange-50 rounded-xl p-4 sm:p-6 text-center transition group border-2 border-transparent hover:border-orange-200 shadow-sm hover:shadow-md"
                 >
                   {brandLogos[brand.slug] ? (
-                    <div className="relative w-24 h-16 mx-auto mb-4">
+                    <div className="relative w-20 h-12 sm:w-24 sm:h-16 mx-auto mb-3 sm:mb-4">
                       <Image
                         src={brandLogos[brand.slug]}
                         alt={`Логотип ${brand.name}`}
                         fill
                         className="object-contain"
-                        sizes="96px"
+                        sizes="(max-width: 640px) 80px, 96px"
+                        unoptimized={brand.slug === 'teplon'}
                       />
                     </div>
                   ) : (
-                    <div className="w-24 h-16 bg-gray-200 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-white transition">
-                      <span className="text-gray-400 text-xs font-semibold">{brand.name}</span>
+                    <div className="w-20 h-12 sm:w-24 sm:h-16 bg-gray-200 rounded-lg flex items-center justify-center mb-3 sm:mb-4 mx-auto group-hover:bg-white transition">
+                      <span className="text-gray-400 text-xs font-semibold text-[10px] sm:text-xs">{brand.name}</span>
                     </div>
                   )}
-                  <h3 className="font-semibold text-gray-900 mb-2">{brand.name}</h3>
-                  <p className="text-xs text-gray-600">{brand.desc}</p>
+                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{brand.name}</h3>
+                  <p className="text-[10px] sm:text-xs text-gray-600 leading-tight">{brand.desc}</p>
                 </div>
               ))}
             </div>

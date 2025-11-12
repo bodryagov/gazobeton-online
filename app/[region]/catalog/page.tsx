@@ -138,9 +138,6 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
   const catalogMeta = getRegionCatalogMeta(regionConfig);
   const catalogKeywords = buildCatalogKeywords(regionSlug, regionConfig.name);
   const catalogUrl = `${BASE_URL}/${regionConfig.slug}/catalog`;
-  const regionData = regionQueryData[regionSlug] ?? { top: [], highFreqLowComp: [] };
-  const quickWinQueries = regionData.highFreqLowComp.slice(0, 4);
-  const evergreenQueries = regionData.top.slice(0, 3);
   const phoneHref = regionConfig.contacts.phone.replace(/[^+\d]/g, '');
 
   // Получаем товары с реальными региональными ценами из products-prices.ts
@@ -294,15 +291,15 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
       ))}
       <main className="bg-gray-50 min-h-screen">
         <nav aria-label="Хлебные крошки" className="bg-white border-b">
-          <div className="container mx-auto px-4 py-3">
-            <Breadcrumbs
-              items={[
-                { label: 'Главная', href: '/' },
-                { label: regionConfig.name, href: `/${regionConfig.slug}` },
-                { label: 'Каталог газобетона' },
-              ]}
-            />
-          </div>
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs
+            items={[
+              { label: 'Главная', href: '/' },
+              { label: regionConfig.name, href: `/${regionConfig.slug}` },
+              { label: 'Каталог газобетона' },
+            ]}
+          />
+        </div>
         </nav>
 
         <header className="container mx-auto px-4 py-8">
@@ -314,16 +311,8 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
               Большой выбор газобетона от проверенных производителей. Все товары сертифицированы и в наличии на складе.{` `}
               Доставляем {regionConfig.namePrepositional} от {deliveryBasePriceLabel} ₽{' '}
               {freeDeliveryLabel ? `и бесплатно от ${freeDeliveryLabel}.` : '— условия обсуждаем индивидуально.'}
-            </p>
-            <p className="text-sm text-gray-500">
-              Наиболее востребованы блоки{' '}
-              <abbr title="Лёгкий блок с высокой теплоизоляцией для наружных стен">D400</abbr>–
-              <abbr title="Плотность с балансом прочности и теплотехнических свойств">D500</abbr> толщиной 300–400 мм. Для перегородок
-              часто выбирают 100–150 мм плотности{' '}
-              <abbr title="Лёгкие блоки для внутренних перегородок и мансард">D300–D350</abbr>. Настройте фильтры ниже, чтобы подобрать
-              решения под задачи коттеджей, бань и хозпостроек.
-            </p>
-          </div>
+          </p>
+        </div>
         </header>
 
       {/* Каталог с региональными ценами */}
@@ -347,11 +336,11 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
           aria-label={`Список газобетона ${regionConfig.nameGenitive}`}
           className="container mx-auto px-4"
         >
-          <Catalog
-            products={regionalProducts}
-            showFilters={true}
-            regionSlug={regionConfig.slug}
-          />
+      <Catalog
+        products={regionalProducts}
+        showFilters={true}
+        regionSlug={regionConfig.slug}
+      />
         </section>
 
         <section className="bg-slate-50 py-12" aria-labelledby="region-pricing-heading">
@@ -414,37 +403,6 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
                       `В регионе ${regionConfig.name} газобетон используют для наружных стен, перегородок, бань и гаражей. Выберите нужную плотность и толщину, чтобы собрать тёплый короб без дополнительного утепления.`}
                   </p>
                 </div>
-
-                {(quickWinQueries.length > 0 || evergreenQueries.length > 0) && (
-                  <div className="mt-6 grid gap-4 md:grid-cols-2">
-                    {quickWinQueries.length > 0 && (
-                      <div className="rounded-2xl border border-orange-200 bg-orange-50/60 p-6">
-                        <h3 className="text-sm font-semibold text-orange-700">Топ-запросы с низкой конкуренцией</h3>
-                        <ul className="mt-3 space-y-2 text-sm text-orange-900">
-                          {quickWinQueries.map((query) => (
-                            <li key={query}>• {query}</li>
-                          ))}
-                        </ul>
-                        <p className="mt-3 text-xs text-orange-700/80">
-                          Покрываем их в описании каталога и карточках товаров, чтобы быстрее выйти в топ.
-                        </p>
-                      </div>
-                    )}
-                    {evergreenQueries.length > 0 && (
-                      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                        <h3 className="text-sm font-semibold text-gray-900">Популярные темы для клиентов</h3>
-                        <ul className="mt-3 space-y-2 text-sm text-gray-600">
-                          {evergreenQueries.map((query) => (
-                            <li key={query}>• {query}</li>
-                          ))}
-                        </ul>
-                        <p className="mt-3 text-xs text-gray-500">
-                          Используем их в FAQ и разделе «Как строить», чтобы закрыть информационный спрос.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )}
 
                 <div className="mt-6 flex flex-wrap gap-3" role="group" aria-label="Действия по каталогу">
                   <Link
@@ -545,7 +503,7 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
             </div>
           </div>
         </div>
-        </section>
+      </section>
     </main>
     </>
   );

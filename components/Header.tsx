@@ -51,14 +51,14 @@ export default function Header() {
 
   return (
     <header className="bg-navy-900 shadow-xl sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-18">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Логотип */}
-          <Link href={homeUrl} className="flex items-center space-x-3 group py-4">
-            <div className="relative">
+          <Link href={homeUrl} className="flex items-center space-x-2 sm:space-x-3 group py-3 sm:py-4 flex-shrink-0 min-w-0">
+            <div className="relative flex-shrink-0">
               {/* Иконка блока с 3D эффектом */}
-              <div className="w-12 h-12 bg-white rounded-lg shadow-lg transform group-hover:rotate-3 transition-transform flex items-center justify-center">
-                <svg viewBox="0 0 32 32" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg shadow-lg transform group-hover:rotate-3 transition-transform flex items-center justify-center">
+                <svg viewBox="0 0 32 32" className="w-6 h-6 sm:w-8 sm:h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="6" y="6" width="20" height="20" rx="1" fill="#fb923c" opacity="0.9"/>
                   <rect x="6" y="6" width="20" height="20" rx="1" stroke="#fb923c" strokeWidth="1"/>
                   {/* Линии для объема */}
@@ -67,11 +67,11 @@ export default function Header() {
                 </svg>
               </div>
             </div>
-            <div>
-              <div className="text-xl font-bold text-white">
+            <div className="min-w-0 flex-shrink">
+              <div className="text-base sm:text-lg lg:text-xl font-bold text-white truncate">
                 Газобетон<span className="text-orange-400">Online</span>
               </div>
-              <div className="text-xs text-gray-300 -mt-1">Вся информация, лучшие цены</div>
+              <div className="text-[10px] sm:text-xs text-gray-300 -mt-0.5 sm:-mt-1 truncate">Вся информация, лучшие цены</div>
             </div>
           </Link>
 

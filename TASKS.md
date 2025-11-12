@@ -805,6 +805,8 @@
 - ✅ Развернуть продакшн-сервер (REG.RU, Ubuntu 20.04): Node.js 20.19, npm, pm2, nginx
 - ✅ Залить актуальную сборку (npm install → npm run build), настроить автозапуск pm2
 - ✅ Настроить nginx как обратный прокси на `http://127.0.0.1:3000`, проверить HTTP 200
+- ✅ Создать репозиторий `bodryagov/gazobeton-online`, выполнить первичный `git commit` → `git push`, настроить GitHub CLI (`gh auth login`, `gh auth setup-git`) и привязать сервер к `origin/main`
+- ✅ Зафиксировать регламент обновлений: `git pull` → `npm install` (при необходимости) → `npm run build` → `pm2 restart gazobeton-online` → `pm2 save`, очищены временные `._*` файлы после синхронизации
 - ☐ Подключить боевой домен (`gazobeton-online.ru`) и выпустить SSL через certbot (ожидаем DNS)
 - ☐ Добавить проект в Яндекс.Вебмастер, загрузить sitemap.xml, запустить индексацию
 
