@@ -158,8 +158,19 @@ export default function Quiz({ onComplete, showCloseButton = false, onClose }: Q
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...data,
-          source: 'home_quiz',
+          name: data.name,
+          phone: data.phone,
+          source: 'quiz',
+          data: {
+            thickness: data.thickness,
+            volume: data.volume,
+            delivery: data.delivery,
+            timeframe: data.timeframe,
+            contactMethod: data.contactMethod,
+            settlement: data.settlement,
+            unloading: data.unloading,
+            roofing: data.roofing,
+          },
         }),
       });
 

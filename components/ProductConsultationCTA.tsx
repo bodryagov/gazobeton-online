@@ -28,10 +28,38 @@ export default function ProductConsultationCTA({ regionName }: ProductConsultati
   const [agreed, setAgreed] = useState(true);
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!agreed) return;
-    setSent(true);
+    if (!agreed || !name.trim() || !phone.trim()) {
+      alert('Пожалуйста, заполните все поля и дайте согласие на обработку данных');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/send-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          source: 'consultation',
+          message: `Консультация по газобетону в регионе ${regionName}`,
+          data: {
+            regionName,
+            contactMethod: method,
+          },
+        }),
+      });
+
+      if (response.ok) {
+        setSent(true);
+      } else {
+        alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+      }
+    } catch (error) {
+      console.error('Error submitting consultation:', error);
+      alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+    }
   };
 
   return (

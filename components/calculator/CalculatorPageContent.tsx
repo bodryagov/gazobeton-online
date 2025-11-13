@@ -433,6 +433,28 @@ export default function CalculatorPageContent({ regionConfig }: CalculatorPageCo
     setIsSubmitting(true);
 
     try {
+      // Отправка в Telegram
+      await fetch('/api/send-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formFields.name.trim(),
+          phone: formFields.phone,
+          source: 'calculator',
+          message: `Расчёт газобетона: ${calculationData.blocksCount} блоков, ${calculationData.volume} м³`,
+          data: {
+            region: regionConfig?.slug ?? 'default',
+            totalBlocks: calculationData.blocksCount,
+            totalVolume: parseFloat(calculationData.volume),
+            totalPrice: parseFloat(calculationData.totalCost),
+            purchaseTime: purchaseTime,
+            leadScore: finalLeadScore,
+            leadType: leadType,
+          },
+        }),
+      });
+
+      // Также отправляем в Google Apps Script (если нужно)
       const SCRIPT_URL =
         'https://script.google.com/macros/s/AKfycbyDKuaQc2g_rT27qMn5X1NJD6-ntn5WStWk5Y50td8CSTlOAxqs81AQO6fpk9Ul6JhC/exec';
 

@@ -387,8 +387,8 @@ export default async function ProductPage({ params }: { params: Promise<ProductP
     const seoParagraphs = [
       `Поставляем газобетонные блоки ${product.brand} ${product.density} ${regionConfig.namePrepositional}. Самовывоз доступен по адресу ${regionConfig.contacts.address}.`,
       regionConfig.delivery.freeFrom
-        ? `Доставка по ${regionConfig.namePrepositional} от ${formatPrice(regionConfig.delivery.basePrice)} ₽. Бесплатно от ${regionConfig.delivery.freeFrom} м³ при единовременной поставке.`
-        : `Доставка по ${regionConfig.namePrepositional} от ${formatPrice(regionConfig.delivery.basePrice)} ₽.`,
+        ? `Доставка ${regionConfig.namePrepositional} от ${formatPrice(regionConfig.delivery.basePrice)} ₽. Бесплатно от ${regionConfig.delivery.freeFrom} м³ при единовременной поставке.`
+        : `Доставка ${regionConfig.namePrepositional} от ${formatPrice(regionConfig.delivery.basePrice)} ₽.`,
     ];
 
     const productKeywords = buildProductKeywords(regionSlug, product, regionConfig);
@@ -531,7 +531,7 @@ export default async function ProductPage({ params }: { params: Promise<ProductP
       },
       {
         question: `Можно ли заказать доставку и разгрузку ${regionConfig.namePrepositional}?`,
-        answer: `Да, доставляем манипулятором по ${regionConfig.namePrepositional} от ${formatPrice(
+        answer: `Да, доставляем манипулятором ${regionConfig.namePrepositional} от ${formatPrice(
           regionConfig.delivery.basePrice
         )} ₽, разгрузка включена. ${
           regionConfig.delivery.freeFrom

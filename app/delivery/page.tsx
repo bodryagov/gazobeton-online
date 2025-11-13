@@ -68,7 +68,7 @@ export default function DeliveryPage() {
       '@type': 'Organization',
       name: 'Газобетон Online',
       url: 'https://gazobeton-online.ru/',
-      telephone: '+7-800-123-45-67',
+      telephone: '+7-962-609-35-35',
     },
     areaServed: [
       { '@type': 'City', name: 'Москва' },
@@ -234,10 +234,10 @@ export default function DeliveryPage() {
           </p>
           <div className="flex flex-col gap-4 md:flex-row md:items-center">
             <Link
-              href="tel:+78001234567"
+              href="tel:+79626093535"
               className="inline-flex items-center justify-center bg-white text-navy-900 px-6 py-3 rounded-lg font-semibold transition hover:bg-navy-100"
             >
-              Позвонить: +7 (800) 123-45-67
+              Позвонить: +7 (962) 609-35-35
             </Link>
             <a
               href="#quiz"

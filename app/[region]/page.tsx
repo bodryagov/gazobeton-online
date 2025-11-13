@@ -11,6 +11,8 @@ import type { RegionSlug } from '@/types/product';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RegionalFAQBlock from '@/components/RegionalFAQBlock';
 import { getRegionalFAQQuestions } from '@/lib/faq';
+import { getManufacturer, getAllManufacturers } from '@/data/manufacturers';
+import Image from 'next/image';
 
 interface RegionPageProps {
   params: Promise<{
@@ -28,10 +30,15 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
     };
   }
 
+  // SEO-оптимизированные мета-теги под популярные запросы из high_freq_low_comp.json
+  // Для Самары: "газобетонные блоки" (1785), "баня из газобетона" (226), "газоблок размеры" (236)
+  // Для Москвы: "газобетон цена за куб" (128), "перекрытие из газобетона" (507)
+  // Для СПб: "купить газобетон в спб", "газобетонные блоки размеры"
+  // Для Уфы: "баня из газоблока", "калькулятор газоблока"
   const title = `Газобетон ${regionConfig.nameGenitive} — каталог и цены | Газобетон Online`;
   const description =
     regionConfig.seo?.description ||
-    `Газобетонные блоки ${regionConfig.nameGenitive}: актуальные цены, доставка ${regionConfig.namePrepositional}, консультации и подбор.`; 
+    `Газобетонные блоки ${regionConfig.nameGenitive}: актуальные цены за м³, доставка ${regionConfig.namePrepositional}, консультации и подбор. Калькулятор расчёта количества блоков.`; 
   const canonical = `https://gazobeton-online.ru/${regionConfig.slug}`;
 
   return {
@@ -67,6 +74,25 @@ export default async function RegionPage({ params }: RegionPageProps) {
 
   // Получаем товары с реальными региональными ценами из products-prices.ts
   const regionalProducts = getRegionalProducts(region as RegionSlug);
+
+  // Получаем список производителей, которые есть в регионе
+  const brandsInRegion = new Set(regionalProducts.map((p) => p.brand));
+  const manufacturersInRegion = getAllManufacturers()
+    .filter((m) => brandsInRegion.has(m.brandSlug))
+    .sort((a, b) => a.brandName.localeCompare(b.brandName));
+
+  // Логотипы производителей (как на главной)
+  const brandLogos: Record<string, string> = {
+    'istkult-ytong': '/brands/istkult-ytong.png',
+    bonolit: '/brands/bonolit.png',
+    kottezh: '/brands/kottezh.png',
+    gras: '/brands/gras.png',
+    teplon: '/brands/teplon.svg',
+    poritep: '/brands/poritep.png',
+    lsr: '/brands/lsr.png',
+    novoblock: '/brands/novoblock.png',
+    stenblock: '/brands/stenblock.png',
+  };
 
   // Schema.org разметка для региона
   const schemaOrg = {
@@ -333,6 +359,68 @@ export default async function RegionPage({ params }: RegionPageProps) {
                     </div>
                   )}
                 </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Популярные производители */}
+        {manufacturersInRegion.length > 0 && (
+          <section className="bg-white py-12 md:py-16 border-b border-gray-200" aria-labelledby="brands-heading">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 id="brands-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Популярные производители газобетона {regionConfig.nameGenitive}
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Работаем напрямую с производителями с 2008 года. Все товары сертифицированы и в наличии на складе.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 mb-8 justify-items-center">
+                {manufacturersInRegion.map((manufacturer) => {
+                  const manufacturerProducts = regionalProducts.filter(
+                    (p) => p.brand === manufacturer.brandSlug
+                  );
+
+                  return (
+                    <Link
+                      key={manufacturer.brandSlug}
+                      href={`/${regionConfig.slug}/manufacturer/${manufacturer.brandSlug}`}
+                      className="bg-gray-50 hover:bg-orange-50 rounded-xl p-4 sm:p-6 text-center transition group border-2 border-transparent hover:border-orange-200 shadow-sm hover:shadow-md flex flex-col items-center w-full max-w-[200px]"
+                    >
+                      {brandLogos[manufacturer.brandSlug] ? (
+                        <div className="relative w-20 h-12 sm:w-24 sm:h-16 mb-3 sm:mb-4 mx-auto flex items-center justify-center">
+                          <Image
+                            src={brandLogos[manufacturer.brandSlug]}
+                            alt={`Логотип ${manufacturer.brandName}`}
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 640px) 80px, 96px"
+                            unoptimized={manufacturer.brandSlug === 'teplon'}
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-20 h-12 sm:w-24 sm:h-16 bg-gray-200 rounded-lg flex items-center justify-center mb-3 sm:mb-4 mx-auto group-hover:bg-white transition">
+                          <span className="text-gray-400 text-xs font-semibold text-[10px] sm:text-xs text-center">
+                            {manufacturer.brandName}
+                          </span>
+                        </div>
+                      )}
+                      <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base group-hover:text-orange-600 transition">
+                        {manufacturer.brandName}
+                      </h3>
+                      <p className="text-[10px] sm:text-xs text-gray-600 leading-tight">
+                        {manufacturer.description.split('.').slice(0, 1).join('.')}
+                        {manufacturerProducts.length > 0 && (
+                          <span className="block mt-1 text-orange-600 font-medium">
+                            {manufacturerProducts.length} {manufacturerProducts.length === 1 ? 'товар' : 'товаров'}
+                          </span>
+                        )}
+                      </p>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </section>

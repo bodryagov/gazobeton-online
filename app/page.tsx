@@ -60,7 +60,7 @@ export default function Home() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+7-495-123-45-67',
+        telephone: '+7-962-609-35-35',
         contactType: 'sales',
         areaServed: 'RU',
         availableLanguage: ['Russian'],

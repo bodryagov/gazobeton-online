@@ -56,10 +56,38 @@ export default function ProductOrderButton({
     setIsOpen(false);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!isAgreed) return;
-    setIsSubmitted(true);
+    if (!isAgreed || !name.trim() || !phone.trim()) {
+      alert('Пожалуйста, заполните все поля и дайте согласие на обработку данных');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/send-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          source: 'product',
+          message: `Заказ товара: ${productName} в регионе ${regionName}`,
+          data: {
+            productName,
+            regionName,
+          },
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+      }
+    } catch (error) {
+      console.error('Error submitting order:', error);
+      alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+    }
   };
 
   return (

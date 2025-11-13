@@ -76,34 +76,40 @@ export default function Header() {
           </Link>
 
           {/* Навигация Desktop */}
-          <nav className="hidden lg:flex items-center space-x-2">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             <Link 
               href={catalogUrl}
-              className="px-4 py-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium"
+              className="px-3 xl:px-4 py-2 text-sm xl:text-base text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium whitespace-nowrap"
             >
               Каталог
             </Link>
             <Link 
               href={calculatorUrl} 
-              className="px-4 py-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium"
+              className="px-3 xl:px-4 py-2 text-sm xl:text-base text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium whitespace-nowrap"
             >
               Калькулятор
             </Link>
             <Link 
-              href="/construction" 
-              className="px-4 py-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium"
+              href="/faq" 
+              className="px-3 xl:px-4 py-2 text-sm xl:text-base text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium whitespace-nowrap"
             >
-              Как строить из газобетона?
+              FAQ
+            </Link>
+            <Link 
+              href="/construction" 
+              className="px-3 xl:px-4 py-2 text-sm xl:text-base text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium whitespace-nowrap"
+            >
+              Как строить
             </Link>
             <Link 
               href={deliveryUrl} 
-              className="px-4 py-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium"
+              className="px-3 xl:px-4 py-2 text-sm xl:text-base text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium whitespace-nowrap"
             >
               Доставка
             </Link>
             <Link 
               href="/contacts" 
-              className="px-4 py-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium"
+              className="px-3 xl:px-4 py-2 text-sm xl:text-base text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition font-medium whitespace-nowrap"
             >
               Контакты
             </Link>
@@ -115,10 +121,10 @@ export default function Header() {
             <div className="flex flex-col items-end border-r border-white/20 pr-4">
               <HeaderRegionSelector />
               <a 
-                href="tel:+74951234567" 
+                href="tel:+79626093535" 
                 className="text-base font-semibold text-white hover:text-orange-400 transition whitespace-nowrap mt-1"
               >
-                +7 (495) 123-45-67
+                +7 (962) 609-35-35
               </a>
             </div>
             
@@ -163,11 +169,18 @@ export default function Header() {
                 Калькулятор
               </Link>
               <Link 
+                href="/faq" 
+                className="block px-4 py-3 text-gray-200 hover:bg-white/10 hover:text-white rounded-lg transition font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+              <Link 
                 href="/construction" 
                 className="block px-4 py-3 text-gray-200 hover:bg-white/10 hover:text-white rounded-lg transition font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Как строить из газобетона?
+                Как строить из газобетона
               </Link>
               <Link 
                 href={deliveryUrl} 
@@ -190,10 +203,10 @@ export default function Header() {
               
               <div className="pt-4 border-t border-white/20 space-y-3 px-4">
                 <a 
-                  href="tel:+74951234567" 
+                  href="tel:+79626093535" 
                   className="block text-base font-semibold text-white hover:text-orange-400 transition"
                 >
-                  +7 (495) 123-45-67
+                  +7 (962) 609-35-35
                 </a>
                 <button className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition">
                   Подобрать газобетон

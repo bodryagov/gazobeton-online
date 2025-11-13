@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Контакты Газобетон Online — телефон, адрес, реквизиты',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     url: 'https://gazobeton-online.ru/contacts',
     siteName: 'Газобетон Online',
     locale: 'ru_RU',
-    type: 'article',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,14 +30,14 @@ const contactGroups = [
   {
     title: 'Отдел продаж',
     description: 'Подбор газобетона, расчёт объёма, оформление заказа.',
-    phone: '+7 (800) 123-45-67',
+    phone: '+7 (962) 609-35-35',
     email: 'sales@gazobeton-online.ru',
     schedule: 'Пн–Сб: 09:00–20:00, Вс: по записи',
   },
   {
     title: 'Логистика и доставка',
     description: 'Согласование дат доставки, подбор транспорта, пропуска.',
-    phone: '+7 (800) 765-43-21',
+    phone: '+7 (962) 609-35-35',
     email: 'delivery@gazobeton-online.ru',
     schedule: 'Пн–Сб: 09:00–19:00',
   },
@@ -45,23 +46,28 @@ const contactGroups = [
 const warehouseLocations = [
   {
     city: 'Москва',
-    address: 'г. Москва, поселение Сосенское, строение 4',
+    address: 'г. Москва, промзона "Южные ворота", складской комплекс, корпус 7',
     schedule: 'Пн–Пт: 09:00–18:00, Сб: 10:00–16:00',
   },
   {
     city: 'Санкт-Петербург',
-    address: 'Ленинградская область, Тосненский район, промзона Южная',
+    address: 'Ленинградская область, Всеволожский район, промзона "Кудрово", склад 12',
     schedule: 'Пн–Пт: 09:00–18:00',
   },
   {
     city: 'Уфа',
-    address: 'г. Уфа, ул. Индустриальная, 15',
+    address: 'г. Уфа, промзона "Западная", складской комплекс, блок Б',
     schedule: 'Пн–Пт: 09:00–17:00',
   },
   {
     city: 'Самара',
-    address: 'г. Самара, пр-д Лесной, 3',
+    address: 'г. Самара, Балтийский проезд, 11 (склад)',
     schedule: 'Пн–Пт: 09:00–18:00, Сб: 10:00–15:00',
+  },
+  {
+    city: 'Самара (офис)',
+    address: 'г. Самара, пр. Кирова, 322а, корпус 1',
+    schedule: 'Пн–Пт: 09:00–18:00',
   },
 ];
 
@@ -98,7 +104,7 @@ export default function ContactsPage() {
     '@type': 'LocalBusiness',
     name: 'Газобетон Online',
     url: 'https://gazobeton-online.ru/',
-    telephone: '+7-800-123-45-67',
+    telephone: '+7-962-609-35-35',
     email: 'info@gazobeton-online.ru',
     contactPoint: contactPoints,
     areaServed: {
@@ -179,61 +185,7 @@ export default function ContactsPage() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold text-gray-900">Форма обратной связи</h2>
-            <p className="text-sm text-gray-600 mt-2">
-              Укажите имя и контакт — мы свяжемся с вами и ответим на вопросы о газобетоне и доставке.
-            </p>
-            <form className="mt-6 space-y-4">
-              <div>
-                <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Имя
-                </label>
-                <input
-                  id="contact-name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  placeholder="Иван"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-100"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Телефон
-                </label>
-                <input
-                  id="contact-phone"
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  placeholder="+7 (___) ___-__-__"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-100"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Комментарий
-                </label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  rows={4}
-                  placeholder="Например: нужен расчёт газобетона на дом 150 м²"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-100"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition"
-              >
-                Отправить заявку
-              </button>
-              <p className="text-xs text-gray-500">
-                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных.
-              </p>
-            </form>
-          </div>
+          <ContactForm />
 
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="text-2xl font-semibold text-gray-900">Адреса складов</h2>
@@ -248,6 +200,45 @@ export default function ContactsPage() {
                   <p className="text-xs text-gray-500 mt-2">График: {warehouse.schedule}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Юридическая информация</h2>
+          <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
+            <div className="space-y-4 text-gray-700">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Полное наименование:</h3>
+                <p>Общество с ограниченной ответственностью «ОСНОВНОЙ ПОСТАВЩИК»</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Сокращённое наименование:</h3>
+                <p>ООО «ОСНОВНОЙ ПОСТАВЩИК»</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Юридический адрес:</h3>
+                <p>443035, г. Самара, пр. Кирова, 130, 1 этаж, офис 1</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">ИНН:</h3>
+                <p>Уточняется</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">КПП:</h3>
+                <p>Уточняется</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">ОГРН:</h3>
+                <p>Уточняется</p>
+              </div>
+              <div className="pt-4 border-t border-gray-200">
+                <p className="text-sm text-gray-500">
+                  Полные реквизиты предоставляются по запросу для оформления документов.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -277,7 +277,7 @@ export default async function RegionCatalogPage({ params }: RegionCatalogPagePro
   };
   const offerTitle =
     offerTitleMap[regionConfig.slug as RegionSlug] ??
-    `Подберём для вас лучшее предложение по газобетону ${regionConfig.namePrepositional}`;
+    `Подберём для вас лучшее предложение по газобетону ${regionConfig.nameGenitive}`;
 
   return (
     <>

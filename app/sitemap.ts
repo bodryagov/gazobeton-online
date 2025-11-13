@@ -2,6 +2,9 @@ import type { MetadataRoute } from 'next';
 import { validRegions } from '@/data/regions';
 import type { RegionSlug } from '@/types/product';
 import { productInfo, getProductPrice } from '@/data/products-prices';
+import { getAllManufacturers } from '@/data/manufacturers';
+import { getRegionalProducts } from '@/lib/products';
+import { getRegionConfig } from '@/data/regions';
 
 const BASE_URL = 'https://gazobeton-online.ru';
 
@@ -11,6 +14,31 @@ const staticRoutes = [
   '/calculator',
   '/faq',
   '/contacts',
+  '/delivery',
+  '/construction',
+  '/privacy',
+];
+
+// Список статей из раздела /construction
+const constructionArticles = [
+  'vybor-gazobetona',
+  'gazobeton-v-sravnenii',
+  'kladka-gazobetona',
+  'uteplenie-gazobetona',
+  'fundament-dlja-gazobetona',
+  'kalkulyator-gazobetona',
+  'proekt-doma-10x10',
+  'banja-iz-gazobloka',
+  'armirovanie-i-peremychki',
+  'dostavka-i-hranenije',
+  'hranenie-i-zima',
+  'instrumenty-dlja-gazobetona',
+  'montazh-bonolit',
+  'samovyvoz-i-manipulyator',
+  'skolko-blokov-nado',
+  'uteplenie-ili-net',
+  'zashita-ot-vlagi',
+  'hozpostrojki-iz-gazobetona',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -72,8 +100,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
           priority: 0.8,
         }));
 
-      return [...regionEntries, ...productEntries];
+      // Страницы производителей для региона
+      const regionalProducts = getRegionalProducts(regionSlug);
+      const brandsInRegion = new Set(regionalProducts.map((p) => p.brand));
+      const manufacturers = getAllManufacturers();
+      
+      const manufacturerEntries = manufacturers
+        .filter((m) => brandsInRegion.has(m.brandSlug))
+        .map((manufacturer) => ({
+          url: `${regionUrl}/manufacturer/${manufacturer.brandSlug}`,
+          lastModified: now,
+          changeFrequency: 'weekly' as const,
+          priority: 0.85,
+        }));
+
+      return [...regionEntries, ...productEntries, ...manufacturerEntries];
     }),
+    // Статьи из раздела /construction
+    ...constructionArticles.map((slug) => ({
+      url: `${BASE_URL}/construction/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
   ];
 
   return routes;

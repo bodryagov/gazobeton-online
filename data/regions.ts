@@ -39,8 +39,8 @@ export const regions: Record<string, RegionConfig> = {
       minOrder: 1,
     },
     contacts: {
-      phone: '+74951234567',
-      phoneFormatted: '+7 (495) 123-45-67',
+      phone: '+79626093535',
+      phoneFormatted: '+7 (962) 609-35-35',
       address: 'Склад в Подмосковье',
       workingHours: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
     },
@@ -62,8 +62,8 @@ export const regions: Record<string, RegionConfig> = {
       minOrder: 1,
     },
     contacts: {
-      phone: '+78121234567',
-      phoneFormatted: '+7 (812) 123-45-67',
+      phone: '+79626093535',
+      phoneFormatted: '+7 (962) 609-35-35',
       address: 'Склад в Санкт-Петербурге',
       workingHours: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
     },
@@ -85,8 +85,8 @@ export const regions: Record<string, RegionConfig> = {
       minOrder: 1,
     },
     contacts: {
-      phone: '+73471234567',
-      phoneFormatted: '+7 (347) 123-45-67',
+      phone: '+79626093535',
+      phoneFormatted: '+7 (962) 609-35-35',
       address: 'Склад в Уфе',
       workingHours: 'Пн-Пт: 9:00-18:00',
     },
@@ -108,8 +108,8 @@ export const regions: Record<string, RegionConfig> = {
       minOrder: 1,
     },
     contacts: {
-      phone: '+78461234567',
-      phoneFormatted: '+7 (846) 123-45-67',
+      phone: '+79626093535',
+      phoneFormatted: '+7 (962) 609-35-35',
       address: 'Склад в Самаре',
       workingHours: 'Пн-Пт: 9:00-18:00',
     },
