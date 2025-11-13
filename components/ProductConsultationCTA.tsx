@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 interface ProductConsultationCTAProps {
   regionName: string;
@@ -27,6 +27,8 @@ export default function ProductConsultationCTA({ regionName }: ProductConsultati
   const [method, setMethod] = useState<ContactMethod>('phone');
   const [agreed, setAgreed] = useState(true);
   const [sent, setSent] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
+  const formStartTime = useRef<number>(Date.now());
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -44,6 +46,8 @@ export default function ProductConsultationCTA({ regionName }: ProductConsultati
           phone: phone.trim(),
           source: 'consultation',
           message: `Консультация по газобетону в регионе ${regionName}`,
+          honeypot: honeypot,
+          formStartTime: formStartTime.current,
           data: {
             regionName,
             contactMethod: method,
@@ -53,8 +57,14 @@ export default function ProductConsultationCTA({ regionName }: ProductConsultati
 
       if (response.ok) {
         setSent(true);
+        formStartTime.current = Date.now();
       } else {
-        alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        const errorData = await response.json().catch(() => ({}));
+        if (response.status === 429) {
+          alert('Слишком много запросов. Пожалуйста, подождите немного и попробуйте снова.');
+        } else {
+          alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        }
       }
     } catch (error) {
       console.error('Error submitting consultation:', error);
@@ -80,6 +90,17 @@ export default function ProductConsultationCTA({ regionName }: ProductConsultati
 
         <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-lg">
           <form className="space-y-4" onSubmit={handleSubmit}>
+            {/* Honeypot поле */}
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+              aria-hidden="true"
+            />
             <div className="space-y-1">
               <label htmlFor="consult-name" className="text-sm font-semibold text-gray-700">
                 Имя

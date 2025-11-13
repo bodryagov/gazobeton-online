@@ -67,7 +67,9 @@ export default function Quiz({ onComplete, showCloseButton = false, onClose }: Q
     roofing: false,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState(''); // Honeypot поле
   const contentRef = useRef<HTMLFormElement>(null);
+  const formStartTime = useRef<number>(Date.now());
 
   // Загрузка прогресса из localStorage
   useEffect(() => {
@@ -161,6 +163,8 @@ export default function Quiz({ onComplete, showCloseButton = false, onClose }: Q
           name: data.name,
           phone: data.phone,
           source: 'quiz',
+          honeypot: honeypot,
+          formStartTime: formStartTime.current,
           data: {
             thickness: data.thickness,
             volume: data.volume,
@@ -177,16 +181,22 @@ export default function Quiz({ onComplete, showCloseButton = false, onClose }: Q
       if (response.ok) {
         setIsSubmitted(true);
         localStorage.removeItem(QUIZ_STORAGE_KEY);
+        formStartTime.current = Date.now(); // Сброс времени
         // Закрываем модалку через 2 секунды после успешной отправки
         if (onComplete) {
           setTimeout(() => onComplete(), 2000);
         }
       } else {
-        // Если API еще не создан, все равно показываем успех
-        setIsSubmitted(true);
-        localStorage.removeItem(QUIZ_STORAGE_KEY);
-        if (onComplete) {
-          setTimeout(() => onComplete(), 2000);
+        const errorData = await response.json().catch(() => ({}));
+        if (response.status === 429) {
+          alert('Слишком много запросов. Пожалуйста, подождите немного и попробуйте снова.');
+        } else {
+          // Если API еще не создан, все равно показываем успех
+          setIsSubmitted(true);
+          localStorage.removeItem(QUIZ_STORAGE_KEY);
+          if (onComplete) {
+            setTimeout(() => onComplete(), 2000);
+          }
         }
       }
     } catch (error) {
@@ -277,6 +287,17 @@ export default function Quiz({ onComplete, showCloseButton = false, onClose }: Q
 
       {/* Контент */}
       <form onSubmit={handleSubmit} className="p-6 md:p-10" ref={contentRef}>
+        {/* Honeypot поле - скрыто от пользователей, но видно ботам */}
+        <input
+          type="text"
+          name="website"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+          aria-hidden="true"
+        />
         {/* Шаг 1: Толщина */}
         {step === 1 && (
           <div className="animate-fadeIn">

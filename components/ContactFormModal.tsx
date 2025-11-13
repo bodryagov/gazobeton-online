@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface ContactFormModalProps {
   isOpen: boolean;
@@ -21,13 +21,16 @@ export default function ContactFormModal({
     email: '',
     message: '',
     consent: false,
+    honeypot: '', // Honeypot поле
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formStartTime = useRef<number>(Date.now());
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      formStartTime.current = Date.now(); // Сброс времени при открытии модалки
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -89,6 +92,8 @@ export default function ContactFormModal({
           phone: formData.phone,
           source: 'product',
           message: manufacturerName ? `Заказ товара ${manufacturerName} в регионе ${regionName}` : formData.message,
+          honeypot: formData.honeypot,
+          formStartTime: formStartTime.current,
           data: {
             manufacturer: manufacturerName,
             region: regionName,
@@ -107,7 +112,9 @@ export default function ContactFormModal({
             email: '',
             message: '',
             consent: false,
+            honeypot: '',
           });
+          formStartTime.current = Date.now();
         }, 2000);
       } else {
         // Если API еще не создан, показываем успех
@@ -121,6 +128,7 @@ export default function ContactFormModal({
             email: '',
             message: '',
             consent: false,
+            honeypot: '',
           });
         }, 2000);
       }
@@ -210,6 +218,17 @@ export default function ContactFormModal({
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot поле - скрыто от пользователей, но видно ботам */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.honeypot}
+                  onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+                  aria-hidden="true"
+                />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Имя <span className="text-red-500">*</span>

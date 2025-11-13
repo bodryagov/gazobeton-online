@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 
 export default function ContactForm() {
@@ -8,9 +8,11 @@ export default function ContactForm() {
     name: '',
     phone: '',
     message: '',
+    honeypot: '', // Honeypot поле для защиты от ботов
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formStartTime = useRef<number>(Date.now());
 
   const formatPhone = (value: string): string => {
     const digits = value.replace(/\D/g, '');
@@ -46,14 +48,22 @@ export default function ContactForm() {
           phone: formData.phone,
           source: 'contact',
           message: formData.message.trim() || undefined,
+          honeypot: formData.honeypot, // Honeypot поле
+          formStartTime: formStartTime.current, // Время начала заполнения
         }),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
-        setFormData({ name: '', phone: '', message: '' });
+        setFormData({ name: '', phone: '', message: '', honeypot: '' });
+        formStartTime.current = Date.now(); // Сброс времени для следующей отправки
       } else {
-        alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        const errorData = await response.json().catch(() => ({}));
+        if (response.status === 429) {
+          alert('Слишком много запросов. Пожалуйста, подождите немного и попробуйте снова.');
+        } else {
+          alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        }
       }
     } catch (error) {
       console.error('Error submitting contact form:', error);
@@ -138,6 +148,17 @@ export default function ContactForm() {
             className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-100"
           />
         </div>
+        {/* Honeypot поле - скрыто от пользователей, но видно ботам */}
+        <input
+          type="text"
+          name="website"
+          value={formData.honeypot}
+          onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+          tabIndex={-1}
+          autoComplete="off"
+          style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+          aria-hidden="true"
+        />
         <button
           type="submit"
           disabled={isSubmitting}

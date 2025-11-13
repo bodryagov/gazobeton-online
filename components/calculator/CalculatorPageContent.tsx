@@ -98,6 +98,8 @@ export default function CalculatorPageContent({ regionConfig }: CalculatorPageCo
     reinforcement: false,
     delivery: false,
   });
+  const [honeypot, setHoneypot] = useState('');
+  const formStartTime = useRef<number>(Date.now());
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [purchaseTime, setPurchaseTime] = useState<PurchaseTime>('1-3months');
   const [communicationMethod, setCommunicationMethod] = useState<CommunicationMethod>('whatsapp');
@@ -442,11 +444,13 @@ export default function CalculatorPageContent({ regionConfig }: CalculatorPageCo
           phone: formFields.phone,
           source: 'calculator',
           message: `Расчёт газобетона: ${calculationData.blocksCount} блоков, ${calculationData.volume} м³`,
+          honeypot: honeypot,
+          formStartTime: formStartTime.current,
           data: {
             region: regionConfig?.slug ?? 'default',
-            totalBlocks: calculationData.blocksCount,
-            totalVolume: parseFloat(calculationData.volume),
-            totalPrice: parseFloat(calculationData.totalCost),
+            blocksCount: calculationData.blocksCount,
+            volume: parseFloat(calculationData.volume),
+            totalCost: parseFloat(calculationData.totalCost),
             purchaseTime: purchaseTime,
             leadScore: finalLeadScore,
             leadType: leadType,
@@ -486,6 +490,7 @@ export default function CalculatorPageContent({ regionConfig }: CalculatorPageCo
   // Управление модальным окном
   const openModal = () => {
     setIsModalOpen(true);
+    formStartTime.current = Date.now(); // Сброс времени при открытии модалки
     document.body.style.overflow = 'hidden';
     setLeadScore((prev) => prev + 15);
   };

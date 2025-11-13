@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 interface ProductOrderButtonProps {
   productName: string;
@@ -46,10 +46,13 @@ export default function ProductOrderButton({
   const [contactMethod, setContactMethod] = useState<ContactMethod>('phone');
   const [isAgreed, setIsAgreed] = useState(true);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
+  const formStartTime = useRef<number>(Date.now());
 
   const openModal = () => {
     setIsOpen(true);
     setIsSubmitted(false);
+    formStartTime.current = Date.now(); // Сброс времени при открытии
   };
 
   const closeModal = () => {
@@ -72,6 +75,8 @@ export default function ProductOrderButton({
           phone: phone.trim(),
           source: 'product',
           message: `Заказ товара: ${productName} в регионе ${regionName}`,
+          honeypot: honeypot,
+          formStartTime: formStartTime.current,
           data: {
             productName,
             regionName,
@@ -81,8 +86,14 @@ export default function ProductOrderButton({
 
       if (response.ok) {
         setIsSubmitted(true);
+        formStartTime.current = Date.now();
       } else {
-        alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        const errorData = await response.json().catch(() => ({}));
+        if (response.status === 429) {
+          alert('Слишком много запросов. Пожалуйста, подождите немного и попробуйте снова.');
+        } else {
+          alert('Ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+        }
       }
     } catch (error) {
       console.error('Error submitting order:', error);
@@ -122,6 +133,17 @@ export default function ProductOrderButton({
             </div>
 
             <form className="px-6 pb-6 pt-4 space-y-5" onSubmit={handleSubmit}>
+              {/* Honeypot поле */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+                aria-hidden="true"
+              />
               <div className="text-sm text-gray-500">
                 Вы оформляете заказ на <span className="font-semibold text-gray-900">{productName}</span> для региона <span className="font-semibold text-gray-900">{regionName}</span>.
               </div>

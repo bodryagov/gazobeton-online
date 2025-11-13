@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { checkRateLimit } from '@/lib/rate-limit';
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -10,6 +11,8 @@ interface LeadData {
   source: 'quiz' | 'calculator' | 'contact' | 'product' | 'consultation';
   message?: string;
   data?: Record<string, unknown>; // Дополнительные данные (например, из квиза)
+  honeypot?: string; // Honeypot поле для защиты от ботов
+  formStartTime?: number; // Время начала заполнения формы
 }
 
 function formatLeadMessage(data: LeadData): string {
@@ -57,12 +60,64 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Получаем IP-адрес клиента
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 
+               request.headers.get('x-real-ip') || 
+               'unknown';
+
+    // Проверка rate limiting: максимум 5 запросов за 15 минут с одного IP
+    if (!checkRateLimit(ip, 5, 15 * 60 * 1000)) {
+      console.warn(`Rate limit exceeded for IP: ${ip}`);
+      return NextResponse.json(
+        { error: 'Слишком много запросов. Пожалуйста, попробуйте позже.' },
+        { status: 429 }
+      );
+    }
+
     const body: LeadData = await request.json();
+
+    // Honeypot проверка: если поле заполнено, это бот
+    if (body.honeypot && body.honeypot.trim() !== '') {
+      console.warn(`Honeypot triggered for IP: ${ip}`);
+      return NextResponse.json(
+        { error: 'Invalid request' },
+        { status: 400 }
+      );
+    }
+
+    // Проверка времени заполнения формы (минимум 3 секунды)
+    if (body.formStartTime) {
+      const formFillTime = Date.now() - body.formStartTime;
+      if (formFillTime < 3000) {
+        console.warn(`Form filled too quickly (${formFillTime}ms) for IP: ${ip}`);
+        return NextResponse.json(
+          { error: 'Invalid request' },
+          { status: 400 }
+        );
+      }
+    }
 
     // Валидация обязательных полей
     if (!body.name || !body.phone) {
       return NextResponse.json(
         { error: 'Name and phone are required' },
+        { status: 400 }
+      );
+    }
+
+    // Базовая валидация данных
+    if (body.name.trim().length < 2 || body.name.trim().length > 100) {
+      return NextResponse.json(
+        { error: 'Invalid name' },
+        { status: 400 }
+      );
+    }
+
+    // Валидация телефона (минимум 10 цифр)
+    const phoneDigits = body.phone.replace(/\D/g, '');
+    if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+      return NextResponse.json(
+        { error: 'Invalid phone number' },
         { status: 400 }
       );
     }
