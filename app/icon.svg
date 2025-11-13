@@ -1,16 +1,13 @@
 <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Фон для лучшей видимости -->
+  <!-- Фон - синий (цвет хедера) -->
   <rect width="512" height="512" rx="64" fill="#1E3A8A"/>
   
-  <!-- Основной блок газобетона -->
-  <rect x="96" y="96" width="320" height="320" rx="16" fill="#fb923c" opacity="0.95"/>
-  <rect x="96" y="96" width="320" height="320" rx="16" stroke="#fb923c" stroke-width="8"/>
+  <!-- Основной блок газобетона (оранжевый) -->
+  <rect x="96" y="96" width="320" height="320" rx="16" fill="#fb923c"/>
+  <rect x="96" y="96" width="320" height="320" rx="16" stroke="#ea580c" stroke-width="6"/>
   
-  <!-- Линии для объема (3D эффект) -->
-  <rect x="96" y="96" width="320" height="32" fill="#fb923c" opacity="0.6"/>
-  <rect x="96" y="96" width="32" height="320" fill="#fb923c" opacity="0.6"/>
-  
-  <!-- Дополнительные детали для узнаваемости -->
-  <rect x="160" y="160" width="192" height="192" rx="8" fill="#fb923c" opacity="0.3"/>
+  <!-- Линии для объема (3D эффект) - верхняя и левая -->
+  <rect x="96" y="96" width="320" height="40" fill="#ea580c" opacity="0.7"/>
+  <rect x="96" y="96" width="40" height="320" fill="#ea580c" opacity="0.7"/>
 </svg>
 
