@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { regionQueryData } from '@/data/seo/region-query-data';
 import { regions } from '@/data/regions';
 
 interface FAQQuestion {
@@ -15,12 +14,6 @@ interface FAQCategory {
   questions: FAQQuestion[];
 }
 
-interface FAQQueryCoverage {
-  regionSlug: string;
-  regionName: string;
-  queries: string[];
-}
-
 const FAQ_CATEGORY_KEYWORDS: Record<string, string[]> = {
   choice: ['какой', 'плотн', 'd400', 'd500', 'лср', 'bonolit', 'лучше', 'сравнен'],
   pricing: ['цена', 'стоим', 'сколько стоит', 'купить', 'за куб', 'коммерческое'],
@@ -28,41 +21,6 @@ const FAQ_CATEGORY_KEYWORDS: Record<string, string[]> = {
   delivery: ['достав', 'манипулятор', 'самовывоз', 'разгруз', 'тариф', 'поддон'],
   montage: ['утепл', 'монтаж', 'клей', 'армир', 'зим', 'хранить', 'инструмент'],
 };
-
-function collectFaqQueryCoverage(keywords: string[]): FAQQueryCoverage[] {
-  const normalized = keywords.map((keyword) => keyword.toLowerCase());
-
-  return Object.entries(regionQueryData)
-    .map(([regionSlug, data]) => {
-      const combined = [...data.highFreqLowComp, ...data.top];
-      const seen = new Set<string>();
-      const matched: string[] = [];
-
-      for (const query of combined) {
-        const lower = query.toLowerCase();
-        if (normalized.some((keyword) => lower.includes(keyword)) && !seen.has(lower)) {
-          matched.push(query);
-          seen.add(lower);
-        }
-        if (matched.length >= 5) {
-          break;
-        }
-      }
-
-      if (matched.length === 0) {
-        return null;
-      }
-
-      const regionName = regions[regionSlug]?.name ?? regionSlug;
-
-      return {
-        regionSlug,
-        regionName,
-        queries: matched.slice(0, 5),
-      };
-    })
-    .filter((item): item is FAQQueryCoverage => Boolean(item));
-}
 
 const faqCategories: FAQCategory[] = [
   {
@@ -85,6 +43,22 @@ const faqCategories: FAQCategory[] = [
       {
         q: 'Что означает марка плотности D400, D500, D600?',
         a: 'Цифра показывает массу 1 м³ блока. D400 (≈400 кг/м³) — лёгкий и самый тёплый, D500 — универсальный для несущих стен, D600 — прочный вариант для сложных конструкций и многоэтажных домов. Чем выше плотность, тем выше прочность и ниже теплоизоляция. В каталоге у каждого товара указаны рекомендуемые области применения.',
+      },
+      {
+        q: 'Какой газобетон лучше выбрать?',
+        a: 'Лучший выбор зависит от задачи: для энергоэффективных домов — D400 толщиной 300–400 мм, для универсального строительства — D500 толщиной 300–375 мм, для многоэтажных домов — D600. По брендам: Bonolit и Ytong — эталон качества и геометрии, ЛСР — отличный выбор для северо-запада, региональные заводы (Коттедж, СГЗСБ) — выгодная цена и быстрая доставка. Используйте наш квиз подбора — за 2 минуты получите рекомендацию под ваш проект.',
+      },
+      {
+        q: 'Какие газоблоки нужны для строительства?',
+        a: 'Для наружных стен нужны блоки D400–D500 толщиной 300–400 мм (в зависимости от региона), для внутренних несущих стен — D500 толщиной 200–250 мм, для перегородок — D400–D500 толщиной 100–150 мм. Количество рассчитывается через калькулятор или по проекту. В каталоге каждый товар помечен назначением: «Для несущих стен дома», «Для перегородок» и т.д.',
+      },
+      {
+        q: 'Чем хорош газобетон?',
+        a: 'Газобетон сочетает лёгкость (в 3–4 раза легче кирпича), отличную теплоизоляцию (не требует утепления при правильной толщине), точную геометрию (±1–2 мм), пожаробезопасность (не горит), экологичность (натуральные компоненты) и скорость кладки (тонкошовная технология). Это оптимальный материал для частного строительства: дом, баня, гараж, хозпостройки.',
+      },
+      {
+        q: 'Какие плюсы и минусы газобетона?',
+        a: 'Плюсы: лёгкость, теплоизоляция, точная геометрия, скорость кладки, пожаробезопасность, экологичность, долговечность (50+ лет). Минусы: требует защиты от влаги (нужна отделка фасада), хрупкость при транспортировке (нужна аккуратная разгрузка), необходимость армирования. В целом для частного строительства плюсы значительно перевешивают минусы, особенно при правильном монтаже и отделке.',
       },
     ],
   },
@@ -109,6 +83,10 @@ const faqCategories: FAQCategory[] = [
         q: 'Какие документы и способы оплаты доступны?',
         a: 'Физлица оплачивают наличными при получении, переводом по реквизитам или онлайн-ссылкой. Юрлица получают счёт с НДС или без, договор поставки и полный комплект закрывающих документов. Предусмотрена рассрочка для постоянных клиентов — обсуждаем индивидуально.',
       },
+      {
+        q: 'Сколько стоит газобетон?',
+        a: 'Цена зависит от бренда, плотности, размера и региона. В каталоге указаны актуальные цены за м³ для каждого региона (Москва, СПб, Самара, Уфа). Например, блоки D500 толщиной 300 мм стоят от 4500 до 6500 руб/м³ в зависимости от производителя. При заказе от 20 м³ — бесплатная доставка, для крупных объектов — оптовые скидки. Оставьте заявку в квизе — подготовим точное КП с ценами.',
+      },
     ],
   },
   {
@@ -131,6 +109,18 @@ const faqCategories: FAQCategory[] = [
       {
         q: 'Можно ли заказать точный раскрой и схему кладки?',
         a: 'Да. Для домов и бань под коммерческое предложение готовим ведомость стен, распределение блоков по рядам и перечень доборных элементов. Это помогает сократить отходы и ускорить кладку на объекте.',
+      },
+      {
+        q: 'Сколько газобетона нужно на дом?',
+        a: 'Зависит от площади, этажности и толщины стен. Для дома 10×10 м (100 м²) с толщиной стен 300 мм нужно примерно 30–35 м³ газобетона. Для точного расчёта используйте наш калькулятор: укажите периметр, высоту, толщину блоков, окна и двери — получите объём с запасом 5–7%. Или пришлите проект — инженер рассчитает вручную с учётом всех нюансов.',
+      },
+      {
+        q: 'Сколько газоблоков в кубе?',
+        a: 'Количество блоков в кубе зависит от размера. Например: блок 625×300×250 мм — 21 шт/м³, блок 600×300×250 мм — 22 шт/м³, блок 625×200×250 мм — 32 шт/м³, перегородочный 600×100×250 мм — 67 шт/м³. Точное количество указано в карточке каждого товара в каталоге. Для быстрого расчёта используйте калькулятор — он автоматически пересчитывает объём в штуки.',
+      },
+      {
+        q: 'Сколько газоблоков нужно на баню?',
+        a: 'Для бани 6×4 м (24 м²) с высотой стен 2,5 м и толщиной блоков 200 мм нужно примерно 6–8 м³ газобетона. Для бани 4×4 м (16 м²) — 4–5 м³. Точный объём зависит от планировки, наличия перегородок и толщины стен. Используйте калькулятор или пришлите проект — рассчитаем с учётом всех особенностей бани.',
       },
     ],
   },
@@ -182,20 +172,23 @@ const faqCategories: FAQCategory[] = [
         q: 'Как хранить газобетон на участке?',
         a: 'Ставьте поддоны на ровное основание, не снимая заводскую плёнку до начала кладки. При долгом хранении укройте сверху тентом, обеспечьте вентиляцию и защиту от грунтовых вод. Зимой очищайте блоки от снега и наледи перед кладкой — это сохраняет прочность клеевого шва.',
       },
+      {
+        q: 'Какие производители газобетона лучше?',
+        a: 'Топ производителей: Bonolit (широкая линейка, стабильная геометрия), Ytong/Istkult (эталон точности ±1 мм), ЛСР (отличное качество для северо-запада), Poritep (хорошее соотношение цена/качество). Региональные заводы (Коттедж, СГЗСБ, ГРАС, Novoblock) — выгодные цены и быстрая доставка. В каталоге все бренды с описанием преимуществ и рекомендуемыми областями применения.',
+      },
+      {
+        q: 'Пеноблок или газоблок — что лучше?',
+        a: 'Газоблок (автоклавный) лучше: точная геометрия (±1–2 мм против ±5 мм у пеноблока), однородная структура, выше прочность и теплоизоляция, не даёт усадки, производится на крупных заводах с сертификацией. Пеноблок может производиться кустарно, имеет больше отклонений в геометрии и требует толстые швы. Для строительства дома рекомендуем газобетон — он обеспечивает лучшие характеристики при сопоставимой цене.',
+      },
     ],
   },
 ];
-
-const faqCategoriesWithCoverage = faqCategories.map((category) => ({
-  ...category,
-  queryCoverage: collectFaqQueryCoverage(category.keywords),
-}));
 
 const defaultPhone = regions.moscow.contacts;
 const defaultPhoneHref = defaultPhone.phone.replace(/[^+\d]/g, '');
 
 export default function FAQPage() {
-  const faqEntities = faqCategoriesWithCoverage.flatMap((category) =>
+  const faqEntities = faqCategories.flatMap((category) =>
     category.questions.map((faq) => ({
       '@type': 'Question',
       name: faq.q,
@@ -212,7 +205,7 @@ export default function FAQPage() {
     '@type': 'FAQPage',
     name: 'Часто задаваемые вопросы о газобетоне',
     description:
-      'Ответы на популярные вопросы о выборе, стоимости, доставке и строительстве из газобетона. Составлено по данным из Wordstat и семантического ядра.',
+      'Ответы на популярные вопросы о выборе, стоимости, доставке и строительстве из газобетона.',
     url: 'https://gazobeton-online.ru/faq',
     inLanguage: 'ru-RU',
     mainEntity: faqEntities,
@@ -243,14 +236,43 @@ export default function FAQPage() {
               Часто задаваемые вопросы
             </h1>
             <p className="text-lg text-gray-600">
-              Отвечаем на запросы из Wordstat и `semantic_summary.md`: выбор бренда, цены, калькулятор, доставка,
-              утепление и хранение газобетона в регионах.
+              Ответы на популярные вопросы о выборе, стоимости, доставке и строительстве из газобетона.
             </p>
           </div>
 
+          {/* Оглавление */}
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm mb-12 border border-gray-200">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Содержание</h2>
+            <nav aria-label="Оглавление разделов FAQ">
+              <ol className="space-y-2">
+                {faqCategories.map((category, index) => (
+                  <li key={category.id}>
+                    <a
+                      href={`#${category.id}`}
+                      className="flex items-center gap-3 text-gray-700 hover:text-orange-600 transition group"
+                    >
+                      <span className="w-6 h-6 bg-orange-100 text-orange-600 rounded flex items-center justify-center text-sm font-semibold group-hover:bg-orange-200 transition">
+                        {index + 1}
+                      </span>
+                      <span className="flex-1">{category.category}</span>
+                      <svg
+                        className="w-4 h-4 text-gray-400 group-hover:text-orange-600 transition"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </div>
+
           {/* FAQ по категориям */}
-          {faqCategoriesWithCoverage.map((category, catIndex) => (
-            <div key={catIndex} className="mb-12">
+          {faqCategories.map((category, catIndex) => (
+            <div key={category.id} id={category.id} className="mb-12 scroll-mt-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mr-3 font-bold">
                   {catIndex + 1}
@@ -282,26 +304,6 @@ export default function FAQPage() {
                   </details>
                 ))}
               </div>
-
-              {category.queryCoverage.length > 0 && (
-                <div className="mt-4 rounded-xl border border-dashed border-orange-200 bg-orange-50/50 p-5">
-                  <h3 className="text-sm font-semibold text-orange-700 uppercase tracking-[0.3em]">
-                    Что спрашивают в регионах
-                  </h3>
-                  <ul className="mt-3 space-y-2 text-sm text-orange-900">
-                    {category.queryCoverage.map((item) => (
-                      <li key={item.regionSlug}>
-                        <span className="font-semibold text-orange-800">{item.regionName}:</span>{' '}
-                        {item.queries.join(', ')}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-3 text-xs text-orange-700/70">
-                    Эти поисковые запросы уже разобраны в ответах и будут раскрыты дополнительно в статьях раздела «Как
-                    строить из газобетона».
-                  </p>
-                </div>
-              )}
             </div>
           ))}
 

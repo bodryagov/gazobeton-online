@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 import { getRegionConfig, validRegions } from '@/data/regions';
-import { regionQueryData } from '@/data/seo/region-query-data';
 import RegionSync from '@/components/RegionSync';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -192,27 +191,6 @@ const regionHighlights: Record<string, string[]> = {
   ],
 };
 
-const DELIVERY_KEYWORDS = ['достав', 'манипуля', 'разгруз', 'привез', 'привезти', 'самовывоз', 'логист', 'тариф'];
-
-function selectDeliveryQueries(regionSlug: string): {
-  quickWins: string[];
-  popular: string[];
-} {
-  const regionData = regionQueryData[regionSlug as keyof typeof regionQueryData];
-  if (!regionData) {
-    return { quickWins: [], popular: [] };
-  }
-
-  const matchesKeyword = (query: string) => {
-    const lower = query.toLowerCase();
-    return DELIVERY_KEYWORDS.some((keyword) => lower.includes(keyword));
-  };
-
-  const quickWins = regionData.highFreqLowComp.filter(matchesKeyword).slice(0, 4);
-  const popular = regionData.top.filter(matchesKeyword).slice(0, 4);
-
-  return { quickWins, popular };
-}
 
 function getRegionTariffs(regionSlug: string) {
   const multiplier = regionMultipliers[regionSlug] ?? 1;
@@ -270,7 +248,6 @@ export default async function RegionDeliveryPage({ params }: RequestContext) {
   const phoneHref = regionConfig.contacts.phone.replace(/[^+\d]/g, '');
   const formattedBasePrice = formatPrice(regionConfig.delivery.basePrice);
   const freeDeliveryThreshold = regionConfig.delivery.freeFrom ? `${regionConfig.delivery.freeFrom} м³` : null;
-  const deliveryQueries = selectDeliveryQueries(regionConfig.slug);
   const regionTariffs = getRegionTariffs(regionConfig.slug);
 
   const breadcrumbs = [
@@ -389,38 +366,6 @@ export default async function RegionDeliveryPage({ params }: RequestContext) {
                 ))}
               </ul>
             </div>
-            {(deliveryQueries.quickWins.length > 0 || deliveryQueries.popular.length > 0) && (
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {deliveryQueries.quickWins.length > 0 && (
-                  <div className="rounded-2xl border border-orange-200 bg-orange-50/70 p-5">
-                    <p className="text-xs uppercase tracking-[0.2em] text-orange-500">Запросы с быстрой отдачей</p>
-                    <h3 className="text-lg font-semibold text-orange-700 mt-2">Что ищут клиенты про доставку</h3>
-                    <ul className="mt-3 space-y-2 text-sm text-orange-900">
-                      {deliveryQueries.quickWins.map((query) => (
-                        <li key={query}>• {query}</li>
-                      ))}
-                    </ul>
-                    <p className="mt-3 text-xs text-orange-700/80">
-                      Эти темы раскрываем в тарифах, FAQ и карточках товаров, чтобы ускорить SEO-рост.
-                    </p>
-                  </div>
-                )}
-                {deliveryQueries.popular.length > 0 && (
-                  <div className="rounded-2xl border border-gray-200 bg-white/80 p-5">
-                    <p className="text-xs uppercase tracking-[0.2em] text-gray-400">Популярные направления</p>
-                    <h3 className="text-lg font-semibold text-gray-900 mt-2">Покрываем ключевые вопросы</h3>
-                    <ul className="mt-3 space-y-2 text-sm text-gray-600">
-                      {deliveryQueries.popular.map((query) => (
-                        <li key={query}>• {query}</li>
-                      ))}
-                    </ul>
-                    <p className="mt-3 text-xs text-gray-500">
-                      Используем полученные данные в контенте и консультациях менеджеров.
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
               href={`tel:${phoneHref}`}
