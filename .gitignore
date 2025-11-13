@@ -36,3 +36,8 @@ yarn-error.log*
 next-env.d.ts
 .env.local
 deploy_env.txt
+
+# Файлы подтверждения прав для поисковых систем (не коммитим, но сохраняем на сервере)
+public/yandex_*.html
+public/google*.html
+public/bing*.html
