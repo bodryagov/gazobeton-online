@@ -1,5 +1,20 @@
+# Разрешаем индексацию всем поисковым роботам
 User-agent: *
-Disallow:
+Allow: /
+# Запрещаем индексацию API-роутов (внутренние эндпоинты)
+Disallow: /api/
 
+# Специальные правила для Яндекс
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+Crawl-delay: 1
+
+# Специальные правила для Google
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+# Карта сайта
 Sitemap: https://gazobeton-online.ru/sitemap.xml
 
