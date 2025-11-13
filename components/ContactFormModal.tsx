@@ -216,10 +216,13 @@ export default function ContactFormModal({
           ) : (
             <div className="p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Заказать {manufacturerName || 'газобетон'}
+                {manufacturerName ? `Заказать ${manufacturerName}` : 'Подобрать газобетон'}
               </h2>
               <p className="text-gray-600 mb-6">
-                Оставьте заявку, и мы свяжемся с вами для уточнения деталей заказа.
+                {manufacturerName 
+                  ? 'Оставьте заявку, и мы свяжемся с вами для уточнения деталей заказа.'
+                  : 'Оставьте контакты, и мы подберём оптимальный вариант газобетона для вашего проекта.'
+                }
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
