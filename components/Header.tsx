@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { getSelectedRegion, isValidRegion } from '@/lib/region';
 import HeaderRegionSelector from './HeaderRegionSelector';
+import ContactFormModal from './ContactFormModal';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     // Проверяем выбранный регион при монтировании
@@ -129,7 +131,10 @@ export default function Header() {
             </div>
             
             {/* CTA */}
-            <button className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+            <button 
+              onClick={() => setIsContactModalOpen(true)}
+              className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+            >
               Подобрать
             </button>
           </div>
@@ -208,7 +213,13 @@ export default function Header() {
                 >
                   +7 (962) 609-35-35
                 </a>
-                <button className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition">
+                <button 
+                  onClick={() => {
+                    setIsContactModalOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition"
+                >
                   Подобрать газобетон
                 </button>
               </div>
@@ -216,6 +227,13 @@ export default function Header() {
           </div>
         )}
       </div>
+      
+      {/* Модалка обратной связи */}
+      <ContactFormModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        regionName={selectedRegion || undefined}
+      />
     </header>
   );
 }

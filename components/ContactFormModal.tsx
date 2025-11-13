@@ -90,8 +90,12 @@ export default function ContactFormModal({
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
-          source: 'product',
-          message: manufacturerName ? `Заказ товара ${manufacturerName} в регионе ${regionName}` : formData.message,
+          source: manufacturerName ? 'product' : 'consultation',
+          message: manufacturerName 
+            ? `Заказ товара ${manufacturerName} в регионе ${regionName}` 
+            : regionName 
+            ? `Консультация по газобетону в регионе ${regionName}` 
+            : formData.message || 'Консультация по газобетону',
           honeypot: formData.honeypot,
           formStartTime: formStartTime.current,
           data: {
