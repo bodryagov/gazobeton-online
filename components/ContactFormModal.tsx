@@ -145,6 +145,7 @@ export default function ContactFormModal({
           email: '',
           message: '',
           consent: false,
+          honeypot: '',
         });
       }, 2000);
     } finally {
