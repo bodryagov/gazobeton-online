@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     canonical: "https://gazobeton-online.ru",
   },
   metadataBase: new URL("https://gazobeton-online.ru"),
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export const viewport: Viewport = {
